@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
+main, nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-nav {
+nav, header .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +16,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main .left-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 * {
@@ -33,9 +40,6 @@ header {
 }
 header .header {
   width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 header .header .left-header p {
   font-size: 14px;
@@ -48,7 +52,7 @@ header .header .right-header {
 /*<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>>>*/
 nav {
   width: 90%;
-  padding-top: 30px;
+  padding: 30px 0;
 }
 nav .middle-nav ul {
   gap: 40px;
@@ -63,16 +67,16 @@ nav .middle-nav ul li:hover {
 }
 nav .middle-nav ul li a {
   text-decoration: none;
-  color: #596C72;
   font-size: 14px;
+  color: #596C72;
 }
 nav .right-nav {
   gap: 10px;
 }
 nav .right-nav a {
   text-decoration: none;
-  color: #596C72;
   font-size: 14px;
+  color: #596C72;
 }
 nav .right-nav a:first-child {
   color: black;
@@ -80,4 +84,37 @@ nav .right-nav a:first-child {
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<main section start>>>>>>>>>>>>>>>>>>>*/
+main {
+  width: 90%;
+}
+main .left-main {
+  gap: 20px;
+}
+main .left-main h1 {
+  font-size: 50px;
+  color: #596C72;
+}
+main .left-main p {
+  padding-right: 50px;
+}
+main .left-main button {
+  border: 1px solid #596C72;
+  background-color: white;
+  border-radius: 30px;
+  transition: 200ms;
+  padding: 10px 60px;
+}
+main .left-main button:hover {
+  background-color: #FFC01F;
+}
+main .left-main button a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #596C72;
+}
+main .right-main img {
+  width: 641px;
+  height: 425px;
+}
+
 /*<<<<<<<<<<<<<<<<<<<main section ended>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=homePage.css.map */

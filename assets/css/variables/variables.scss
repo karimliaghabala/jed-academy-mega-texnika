@@ -21,23 +21,30 @@ $textColor:#596C72;
     justify-content: center;
     align-items: center;
 }
+%display-flex-d-c-s{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+@mixin textStyle($font-s:14px){
+    text-decoration: none;
+    font-size: $font-s;
+    color: $textColor;
+}
 
-@mixin button (
-    $height:40px,
-    $borderColor:#596C72,
-){
-    border: 1px solid $borderColor;
-    $borderRadius:30px;
+@mixin buttonWhite ($width:200px,$height:30px,$color){
+    border: 1px solid $color;
+    background-color: white;
+    border-radius:30px;
     transition: 200ms;
+    padding: 10px 60px;
     &:hover{
-        background-color: #FFC01F;
+        background-color: $color;
     }
 }
-@mixin button (
-    $height:40px,
-    $borderColor:#FFC01F,
-){
-    border: 1px solid $borderColor;
+@mixin buttonYellow ($height:80px,$color){
+    border: 1px solid $color;
     $borderRadius:30px;
     transition: 200ms;
     &:hover{
