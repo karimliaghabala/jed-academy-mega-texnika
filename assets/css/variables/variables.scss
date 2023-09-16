@@ -3,12 +3,22 @@
 
 $fontFamilyMontserrat: 'Montserrat', sans-serif;
 $color:#FFC01F;
-$backgroundColor:#FFFFFF;
 $textColor:#596C72;
 
 %display-flex-center{
     display: flex;
     justify-content:center ;
+    align-items: center;
+}
+%display-flex-jc-sb{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+%display-flex-d-c-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
