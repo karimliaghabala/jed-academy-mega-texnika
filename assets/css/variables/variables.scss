@@ -10,6 +10,7 @@ $textColor:#596C72;
     justify-content:center ;
     align-items: center;
 }
+
 %display-flex-jc-sb{
     display: flex;
     justify-content:space-between ;
@@ -18,14 +19,14 @@ $textColor:#596C72;
 %display-flex-d-c-c{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-%display-flex-d-c-s{
+%display-flex-d-s-l{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: start;
+    justify-content: left;
 }
 @mixin textStyle($font-s:14px){
     text-decoration: none;
@@ -33,21 +34,31 @@ $textColor:#596C72;
     color: $textColor;
 }
 
-@mixin buttonWhite ($width:200px,$height:30px,$color){
-    border: 1px solid $color;
+@mixin buttonWhite ($width:200px,$height:40px){
+    width: $width;
+    height: $height;
+    color: $textColor;
+    border: 1px solid $textColor;
     background-color: white;
     border-radius:30px;
     transition: 200ms;
-    padding: 10px 60px;
     &:hover{
         background-color: $color;
+        border: 1px solid $color ;
+        cursor: pointer;
     }
 }
-@mixin buttonYellow ($height:80px,$color){
+@mixin buttonYellow ($width:200px,$height:40px){
+    width: $width;
+    height: $height;
+    color: $textColor;
     border: 1px solid $color;
-    $borderRadius:30px;
+    background-color:$color;
+    border-radius:30px;
     transition: 200ms;
     &:hover{
         background-color: white;
+        border: 1px solid $textColor ;
+        cursor: pointer;
     }
 }

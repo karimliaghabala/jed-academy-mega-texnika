@@ -1,28 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-main, nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
+.offers .button, main, nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-nav, header .header {
+.bands .bands-img .img-link, .offers .offers-items, .category-test, .categories .items, nav, header .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-body {
+.bands, .offers .offers-items article, .categories .items a .items-c, body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-main .left-main {
+.offers, .category-test .right-ct article, .category-test .right-ct, main .left-main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
+  justify-content: left;
 }
 
 * {
@@ -86,6 +86,7 @@ nav .right-nav a:first-child {
 /*<<<<<<<<<<<<<<<<<<<main section start>>>>>>>>>>>>>>>>>>>*/
 main {
   width: 90%;
+  padding-top: 30px;
 }
 main .left-main {
   gap: 20px;
@@ -98,23 +99,214 @@ main .left-main p {
   padding-right: 50px;
 }
 main .left-main button {
+  width: 200px;
+  height: 40px;
+  color: #596C72;
   border: 1px solid #596C72;
   background-color: white;
   border-radius: 30px;
   transition: 200ms;
-  padding: 10px 60px;
 }
 main .left-main button:hover {
   background-color: #FFC01F;
+  border: 1px solid #FFC01F;
+  cursor: pointer;
 }
 main .left-main button a {
   text-decoration: none;
   font-size: 14px;
   color: #596C72;
 }
+main .right-main {
+  border: 1px solid rgba(0, 0, 0, 0.123);
+  padding: 10px;
+}
 main .right-main img {
   width: 641px;
   height: 425px;
+  box-shadow: 1px 1px 10px grey;
 }
 
-/*<<<<<<<<<<<<<<<<<<<main section ended>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=homePage.css.map */
+/*<<<<<<<<<<<<<<<<<<<main section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<categories section start>>>>>>>>>>>>>>>>>>>*/
+.categories {
+  width: 90%;
+  gap: 30px;
+  padding: 50px 0;
+}
+.categories h2 {
+  color: #596C72;
+  padding-bottom: 20px;
+}
+.categories .items {
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 10px;
+}
+.categories .items a {
+  text-decoration: none;
+}
+.categories .items a .items-c {
+  border: 1px solid rgba(128, 128, 128, 0.164);
+  box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.247);
+  padding: 10px;
+  transition: 200ms;
+}
+.categories .items a .items-c:hover {
+  transform: translate(-10px) scale(1.05);
+}
+.categories .items a .items-c h3 {
+  color: #596C72;
+}
+.categories .items a .items-c img {
+  width: 250px;
+  height: 229px;
+  padding: 5px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<categories section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<categories test section start>>>>>>>>>>>>>>>>>>>*/
+.category-test {
+  width: 90%;
+  gap: 50px;
+  padding: 50px 0;
+}
+.category-test .left-ct {
+  margin-top: 150px;
+}
+.category-test .left-ct img {
+  width: 330px;
+  height: 540px;
+}
+.category-test .right-ct {
+  padding-left: 60px;
+  gap: 20px;
+}
+.category-test .right-ct img {
+  width: 730px;
+  height: 450px;
+}
+.category-test .right-ct article {
+  gap: 20px;
+}
+.category-test .right-ct article h2 {
+  color: #596C72;
+  font-size: 35px;
+}
+.category-test .right-ct article a {
+  text-decoration: none;
+}
+.category-test .right-ct article a button {
+  width: 200px;
+  height: 40px;
+  color: #596C72;
+  border: 1px solid #596C72;
+  background-color: white;
+  border-radius: 30px;
+  transition: 200ms;
+}
+.category-test .right-ct article a button:hover {
+  background-color: #FFC01F;
+  border: 1px solid #FFC01F;
+  cursor: pointer;
+}
+
+/*<<<<<<<<<<<<<<<<<<<categories test section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<offers section start>>>>>>>>>>>>>>>>>>>*/
+.offers {
+  width: 90%;
+  padding: 50px 0;
+  gap: 20px;
+}
+.offers h2 {
+  color: #596C72;
+}
+.offers .offers-items {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.offers .offers-items article {
+  border: 1px solid rgba(128, 128, 128, 0.098);
+  box-shadow: 1px 1px 3px rgb(204, 202, 202);
+  padding: 10px;
+  gap: 10px;
+  transition: 200ms;
+}
+.offers .offers-items article:hover {
+  transform: translate(-10px) scale(1.05);
+}
+.offers .offers-items article img {
+  width: 250px;
+  height: 210px;
+}
+.offers .offers-items article .text-l {
+  padding-right: 80px;
+}
+.offers .offers-items article .text-l h4 {
+  color: #596C72;
+}
+.offers .offers-items article .text-l :nth-child(2) {
+  font-size: 13px;
+  color: #596C72;
+}
+.offers .offers-items article .text-l :nth-child(3) {
+  font-size: 10px;
+  color: #596C72;
+}
+.offers .offers-items article .text-r {
+  padding-left: 80px;
+}
+.offers .offers-items article .text-r p {
+  color: #FFC01F;
+}
+.offers .offers-items article a button {
+  width: 255px;
+  height: 40px;
+  color: #596C72;
+  border: 1px solid #596C72;
+  background-color: white;
+  border-radius: 30px;
+  transition: 200ms;
+}
+.offers .offers-items article a button:hover {
+  background-color: #FFC01F;
+  border: 1px solid #FFC01F;
+  cursor: pointer;
+}
+.offers .button {
+  width: 100%;
+}
+.offers .button a button {
+  width: 200px;
+  height: 40px;
+  color: #596C72;
+  border: 1px solid #FFC01F;
+  background-color: #FFC01F;
+  border-radius: 30px;
+  transition: 200ms;
+}
+.offers .button a button:hover {
+  background-color: white;
+  border: 1px solid #596C72;
+  cursor: pointer;
+}
+
+/*<<<<<<<<<<<<<<<<<<<offers section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<bands section start>>>>>>>>>>>>>>>>>>>*/
+.bands {
+  width: 100%;
+  padding: 50px 0;
+  gap: 40px;
+}
+.bands h2 {
+  color: #596C72;
+}
+.bands .bands-img {
+  width: 100%;
+}
+.bands .bands-img .img-link {
+  width: 100%;
+}
+
+/*<<<<<<<<<<<<<<<<<<<bands section ended>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=homePage.css.map */
