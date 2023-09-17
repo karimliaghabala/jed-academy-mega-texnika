@@ -302,16 +302,27 @@ main .right-main img {
   width: 100%;
   padding: 50px 0;
   gap: 40px;
+  overflow: hidden;
 }
 .bands h2 {
   color: #596C72;
 }
 .bands .bands-img {
   width: 100%;
+  position: relative;
+  animation: bands 20s linear infinite;
 }
 .bands .bands-img .img-link {
   width: 100%;
   gap: 80px;
 }
 
+@keyframes bands {
+  0% {
+    left: 40px;
+  }
+  100% {
+    left: 300px;
+  }
+}
 /*<<<<<<<<<<<<<<<<<<<bands section ended>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=homePage.css.map */
