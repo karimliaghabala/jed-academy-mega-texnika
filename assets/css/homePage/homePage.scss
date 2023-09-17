@@ -111,7 +111,7 @@ main {
     padding-bottom: 20px;
   }
   .items{
-    max-width: 1140px;
+    max-width: 1240px;
     @extend %display-flex-jc-sb;
     flex-wrap: wrap;
     padding: 20px 0;
@@ -192,7 +192,6 @@ main {
     color: $textColor;
   }
   .offers-items{
-    max-width: 1140px;
     @extend %display-flex-jc-sb;
     flex-wrap: wrap;
     gap: 20px;
