@@ -265,6 +265,14 @@ main {
     width: 100%;
     position: relative;
     animation: bands 20s linear infinite;
+    @keyframes bands {
+      0% {
+          left: 40px;
+      }
+      100% {
+          left: 300px;
+      }
+    }
     .img-link{
       width: 100%;
       @extend %display-flex-center;
@@ -272,13 +280,40 @@ main {
     }
   }
 }
-@keyframes bands {
-  0% {
-      left: 40px;
+
+/*<<<<<<<<<<<<<<<<<<<bands section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<innovation section start>>>>>>>>>>>>>>>>>>>*/
+
+.innovation{
+  width: 90%;
+  @extend %display-flex-d-c-c;
+  gap: 30px;
+  padding: 50px 0;
+  h2{
+    color: $textColor;
   }
-  100% {
-      left: 300px;
+  .items-inn{
+    @extend %display-flex-center;
+    gap: 80px;
+    article{
+      @extend %display-flex-d-s-l;
+      gap: 20px;
+      width: 215px;
+      height: 328px;
+      img{
+        width: 270px;
+        height: 200px;
+      }
+      :nth-child(3){
+        color: $textColor;
+        font-size: 12px;
+      }
+      :nth-child(4){
+        color: $textColor;
+        font-size: 10px;
+      }
+    }
   }
 }
 
-/*<<<<<<<<<<<<<<<<<<<bands section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<innovation section ended>>>>>>>>>>>>>>>>>>>*/
