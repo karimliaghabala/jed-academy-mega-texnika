@@ -139,6 +139,7 @@ main .right-main img {
   padding-bottom: 20px;
 }
 .categories .items {
+  max-width: 1140px;
   flex-wrap: wrap;
   padding: 20px 0;
   gap: 10px;
@@ -222,7 +223,7 @@ main .right-main img {
   color: #596C72;
 }
 .offers .offers-items {
-  width: 100%;
+  max-width: 1140px;
   flex-wrap: wrap;
   gap: 20px;
 }
