@@ -6,7 +6,7 @@
   font-family: $fontFamilyMontserrat;
 }
 body {
-  max-width: 1440px;
+  width: 100%;
   @extend %display-flex-d-c-c;
 }
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
@@ -147,7 +147,7 @@ main {
 
 .category-test{
   width: 90%;
-  @extend %display-flex-jc-sb;
+  @extend %display-flex-center;
   gap: 50px;
   padding: 50px 0;
   .left-ct{
@@ -264,7 +264,8 @@ main {
     width: 100%;
     .img-link{
       width: 100%;
-      @extend %display-flex-jc-sb;
+      @extend %display-flex-center;
+      gap: 80px;
     }
   }
 }
