@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.whyWe, .contact .contact-in article form .right-input, .contact .contact-in article form .left-input, .contact, .innovation .items-inn, .bands .bands-img .img-link, .offers .button, .category-test, main, nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
+.whyWe, .category-test, nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer .bottom, .contact .contact-in, .offers .offers-items, .categories .items, nav, header .header {
+footer .bottom, nav, header .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer, .innovation, .bands, .offers .offers-items article, .offers, .categories .items a .items-c, .categories, body {
+footer, .aboutUs article, body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-footer .top .box3, footer .top .box2 ul, .whyWe article, .contact .contact-in article form, .contact .contact-in article, .innovation .items-inn article, .category-test .right-ct article, .category-test .right-ct, main .left-main {
+footer .top .box3, footer .top .box2 ul, .whyWe article, .category-test .right-ct article, .category-test .right-ct {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -87,89 +87,61 @@ nav .right-nav a:first-child {
 }
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
-/*<<<<<<<<<<<<<<<<<<<main section start>>>>>>>>>>>>>>>>>>>*/
-main {
+/*<<<<<<<<<<<<<<<<<<<aboutUs section start>>>>>>>>>>>>>>>>>>>*/
+.aboutUs {
   width: 90%;
-  padding-top: 30px;
 }
-main .left-main {
-  gap: 20px;
+.aboutUs .top-about {
+  padding: 10px 0;
 }
-main .left-main h1 {
-  font-size: 50px;
-  color: #596C72;
+.aboutUs .top-about ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
 }
-main .left-main p {
-  padding-right: 50px;
+.aboutUs .top-about ul li {
+  list-style: none;
 }
-main .left-main button {
-  width: 200px;
-  height: 40px;
-  color: #596C72;
-  border: 1px solid #596C72;
-  background-color: white;
-  border-radius: 30px;
-  transition: 200ms;
-}
-main .left-main button:hover {
-  background-color: #FFC01F;
-  border: 1px solid #FFC01F;
-  cursor: pointer;
-}
-main .left-main button a {
+.aboutUs .top-about ul a {
   text-decoration: none;
-  font-size: 14px;
   color: #596C72;
 }
-main .right-main {
+.aboutUs .top-about ul a:hover {
+  text-shadow: 1px 1px 1px grey;
+}
+.aboutUs .top-about ul :nth-child(2) a {
+  color: black;
+}
+.aboutUs article {
+  gap: 10px;
+}
+.aboutUs article h1 {
+  color: #596C72;
+  font-size: 50px;
+}
+.aboutUs article a {
+  text-decoration: none;
+  color: #FFC01F;
+}
+.aboutUs article a:hover {
+  text-shadow: 1px 1px 1px grey;
+}
+.aboutUs article p {
+  text-align: center;
+  width: 500px;
+  color: #596C72;
+}
+.aboutUs .bottom-about {
   border: 1px solid rgba(0, 0, 0, 0.123);
   padding: 10px;
+  margin: 20px 0;
 }
-main .right-main img {
-  width: 641px;
-  height: 425px;
+.aboutUs .bottom-about img {
+  width: 100%;
   box-shadow: 1px 1px 10px grey;
 }
 
-/*<<<<<<<<<<<<<<<<<<<main section ended>>>>>>>>>>>>>>>>>>>*/
-/*<<<<<<<<<<<<<<<<<<<categories section start>>>>>>>>>>>>>>>>>>>*/
-.categories {
-  width: 90%;
-  gap: 30px;
-  padding: 50px 0;
-}
-.categories h2 {
-  color: #596C72;
-  padding-bottom: 20px;
-}
-.categories .items {
-  max-width: 1240px;
-  flex-wrap: wrap;
-  padding: 20px 0;
-  gap: 10px;
-}
-.categories .items a {
-  text-decoration: none;
-}
-.categories .items a .items-c {
-  border: 1px solid rgba(128, 128, 128, 0.164);
-  box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.247);
-  padding: 10px;
-  transition: 200ms;
-}
-.categories .items a .items-c:hover {
-  transform: translate(-10px) scale(1.05);
-}
-.categories .items a .items-c h3 {
-  color: #596C72;
-}
-.categories .items a .items-c img {
-  width: 250px;
-  height: 229px;
-  padding: 5px;
-}
-
-/*<<<<<<<<<<<<<<<<<<<categories section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<aboutUs section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<categories test section start>>>>>>>>>>>>>>>>>>>*/
 .category-test {
   width: 90%;
@@ -217,217 +189,6 @@ main .right-main img {
 }
 
 /*<<<<<<<<<<<<<<<<<<<categories test section ended>>>>>>>>>>>>>>>>>>>*/
-/*<<<<<<<<<<<<<<<<<<<offers section start>>>>>>>>>>>>>>>>>>>*/
-.offers {
-  width: 90%;
-  padding: 50px 0;
-  gap: 20px;
-}
-.offers h2 {
-  color: #596C72;
-}
-.offers .offers-items {
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.offers .offers-items article {
-  border: 1px solid rgba(128, 128, 128, 0.098);
-  box-shadow: 1px 1px 3px rgb(204, 202, 202);
-  padding: 10px;
-  gap: 10px;
-  transition: 200ms;
-}
-.offers .offers-items article:hover {
-  transform: translate(-10px) scale(1.05);
-}
-.offers .offers-items article img {
-  width: 250px;
-  height: 210px;
-}
-.offers .offers-items article .text-l {
-  padding-right: 80px;
-}
-.offers .offers-items article .text-l h4 {
-  color: #596C72;
-}
-.offers .offers-items article .text-l :nth-child(2) {
-  font-size: 13px;
-  color: #596C72;
-}
-.offers .offers-items article .text-l :nth-child(3) {
-  font-size: 10px;
-  color: #596C72;
-}
-.offers .offers-items article .text-r {
-  padding-left: 80px;
-}
-.offers .offers-items article .text-r p {
-  color: #FFC01F;
-}
-.offers .offers-items article a button {
-  width: 255px;
-  height: 40px;
-  color: #596C72;
-  border: 1px solid #596C72;
-  background-color: white;
-  border-radius: 30px;
-  transition: 200ms;
-}
-.offers .offers-items article a button:hover {
-  background-color: #FFC01F;
-  border: 1px solid #FFC01F;
-  cursor: pointer;
-}
-.offers .button {
-  width: 100%;
-}
-.offers .button a button {
-  width: 200px;
-  height: 40px;
-  color: #596C72;
-  border: 1px solid #FFC01F;
-  background-color: #FFC01F;
-  border-radius: 30px;
-  transition: 200ms;
-}
-.offers .button a button:hover {
-  background-color: white;
-  border: 1px solid #596C72;
-  cursor: pointer;
-}
-
-/*<<<<<<<<<<<<<<<<<<<offers section ended>>>>>>>>>>>>>>>>>>>*/
-/*<<<<<<<<<<<<<<<<<<<bands section start>>>>>>>>>>>>>>>>>>>*/
-.bands {
-  width: 100%;
-  padding: 50px 0;
-  gap: 40px;
-  overflow: hidden;
-}
-.bands h2 {
-  color: #596C72;
-}
-.bands .bands-img {
-  width: 100%;
-  position: relative;
-  animation: bands 20s linear infinite;
-}
-@keyframes bands {
-  0% {
-    left: 40px;
-  }
-  100% {
-    left: 300px;
-  }
-}
-.bands .bands-img .img-link {
-  width: 100%;
-  gap: 80px;
-}
-
-/*<<<<<<<<<<<<<<<<<<<bands section ended>>>>>>>>>>>>>>>>>>>*/
-/*<<<<<<<<<<<<<<<<<<<innovation section start>>>>>>>>>>>>>>>>>>>*/
-.innovation {
-  width: 90%;
-  gap: 30px;
-  padding: 50px 0;
-}
-.innovation h2 {
-  color: #596C72;
-}
-.innovation .items-inn {
-  gap: 95px;
-}
-.innovation .items-inn article {
-  gap: 20px;
-  width: 215px;
-  height: 328px;
-}
-.innovation .items-inn article img {
-  width: 270px;
-  height: 200px;
-}
-.innovation .items-inn article :nth-child(3) {
-  color: #596C72;
-  font-size: 12px;
-}
-.innovation .items-inn article :nth-child(4) {
-  color: #596C72;
-  font-size: 10px;
-}
-
-/*<<<<<<<<<<<<<<<<<<<innovation section ended>>>>>>>>>>>>>>>>>>>*/
-/*<<<<<<<<<<<<<<<<<<<contact section start>>>>>>>>>>>>>>>>>>>*/
-.contact {
-  width: 100%;
-  height: 300px;
-  background-color: #efefef;
-  margin: 80px 0;
-}
-.contact .contact-in {
-  width: 90%;
-  gap: 30px;
-}
-.contact .contact-in article {
-  width: 40%;
-  gap: 20px;
-}
-.contact .contact-in article h2 {
-  color: #596C72;
-}
-.contact .contact-in article p {
-  font-size: 12px;
-}
-.contact .contact-in article form {
-  width: 100%;
-  gap: 10px;
-}
-.contact .contact-in article form .left-input {
-  width: 100%;
-  gap: 10px;
-}
-.contact .contact-in article form .left-input input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 30px;
-  border: 1px solid #596C72;
-}
-.contact .contact-in article form .right-input {
-  width: 100%;
-  gap: 10px;
-}
-.contact .contact-in article form .right-input input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 30px;
-  border: 1px solid #596C72;
-}
-.contact .contact-in article input:nth-child(3) {
-  padding: 10px;
-  width: 100%;
-  height: 40px;
-  color: #596C72;
-  border: 1px solid #596C72;
-  background-color: white;
-  border-radius: 30px;
-  transition: 200ms;
-}
-.contact .contact-in article input:nth-child(3):hover {
-  background-color: #FFC01F;
-  border: 1px solid #FFC01F;
-  cursor: pointer;
-}
-.contact .contact-in figure {
-  width: 60%;
-}
-.contact .contact-in figure img {
-  right: 5px;
-  width: 650px;
-  height: 520px;
-  padding-bottom: 100px;
-}
-
-/*<<<<<<<<<<<<<<<<<<<contact section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<whyWe section start>>>>>>>>>>>>>>>>>>>*/
 .whyWe {
   width: 90%;
@@ -459,7 +220,7 @@ main .right-main img {
 footer {
   width: 100%;
   gap: 10px;
-  background: linear-gradient(to right, rgba(255, 192, 31, 0.1215686275), #FFFFFF, rgba(255, 192, 31, 0.1529411765));
+  background: linear-gradient(to right, rgba(255, 192, 31, 0.1215686275), #ffffff, rgba(255, 192, 31, 0.1529411765));
 }
 footer .top {
   width: 90%;
@@ -476,6 +237,9 @@ footer .top .box2 ul li {
 footer .top .box2 ul li a {
   text-decoration: none;
   color: #596C72;
+}
+footer .top .box2 ul li a:hover {
+  text-shadow: 1px 1px 1px grey;
 }
 footer .top .box3 {
   gap: 12px;
@@ -500,4 +264,4 @@ footer .bottom p {
   color: #596C72;
 }
 
-/*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=homePage.css.map */
+/*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=aboutUs.css.map */

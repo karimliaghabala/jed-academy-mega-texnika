@@ -477,6 +477,9 @@ footer .top .box2 ul li a {
   text-decoration: none;
   color: #596C72;
 }
+footer .top .box2 ul li a:hover {
+  text-shadow: 1px 1px 1px grey;
+}
 footer .top .box3 {
   gap: 12px;
 }
