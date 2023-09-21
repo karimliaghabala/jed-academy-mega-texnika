@@ -1,0 +1,209 @@
+@import "../variables/variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontFamilyMontserrat;
+}
+body {
+  width: 100%;
+  @extend %display-flex-d-c-c;
+}
+/*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
+header {
+  width: 100%;
+  height: 40px;
+  background-color: $color;
+  @extend %display-flex-center;
+  .header {
+    width: 90%;
+    @extend %display-flex-jc-sb;
+    .left-header {
+      p {
+        font-size: 14px;
+      }
+    }
+    .right-header {
+      @extend %display-flex-center;
+      gap: 25px;
+    }
+  }
+}
+/*<<<<<<<<<<<<<<<<<<<header section ended>>>>>>>>>>>>>>>>>>> */
+/*<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>>>*/
+
+nav {
+  width: 90%;
+  @extend %display-flex-jc-sb;
+  padding: 30px 0;
+  .middle-nav {
+    ul {
+      @extend %display-flex-center;
+      gap: 40px;
+      li {
+        list-style: none;
+        transition: 200ms;
+        &:hover {
+          color: black;
+          text-shadow: 1px 1px 1px grey;
+        }
+        a {
+          @include textStyle();
+        }
+      }
+    }
+  }
+  .right-nav {
+    @extend %display-flex-center;
+    gap: 10px;
+    a {
+      @include textStyle();
+      &:first-child {
+        color: black;
+      }
+    }
+  }
+}
+
+/*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
+
+/*<<<<<<<<<<<<<<<<<<<rental section start>>>>>>>>>>>>>>>>>>>*/
+.rental {
+  width: 90%;
+  padding: 30px 0 50px 0;
+  .top-nav {
+    width: 100%;
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      li{
+        list-style: none;
+        padding-right: 10px;
+        a{
+          text-decoration: none;
+          color: $textColor;
+        }
+      }
+      :nth-child(2){
+        a{
+          color: black;
+        }
+      }
+    }
+  }
+  .rental-info{
+    width: 100%;
+    @extend %display-flex-jc-sb;
+    padding: 80px 0;
+    gap: 20px;
+    .left{
+      width: 30%;
+      h2{
+        color: $textColor;
+        padding-bottom: 80px;
+      }
+      img{
+        width: 384px;
+        height: 594px;
+        border: 1px solid rgba(128, 128, 128, 0.178);
+        box-shadow: 1px 1px  rgba(128, 128, 128, 0.192);
+        padding: 10px;
+      }
+    }
+    .right{
+      width: 65%;
+      @extend %display-flex-d-c-c;
+      gap: 50px;
+      img{
+        width: 801px;
+        height: 522px;
+        border: 1px solid rgba(128, 128, 128, 0.178);
+        box-shadow: 1px 1px  rgba(128, 128, 128, 0.192);
+        padding: 10px;
+      }
+      .text{
+        max-width: 700px;
+      }
+    }
+  }
+  .question{
+    width: 100%;
+    @extend %display-flex-d-c-c;
+    gap: 20px;
+    color: $textColor;
+    padding: 80px 0;
+    h2{
+      padding: 20px 0;
+    }
+    .questions{
+      width: 70%;
+      @extend %display-flex-jc-sb;
+      border-bottom: 1px solid $textColor;
+      padding-bottom: 20px;
+      i{
+        color: $color;
+      }
+    }
+  }
+}
+/*<<<<<<<<<<<<<<<<<<<rental section ended>>>>>>>>>>>>>>>>>>>*/
+
+/*<<<<<<<<<<<<<<<<<<<footer section start>>>>>>>>>>>>>>>>>>>*/
+footer {
+  width: 100%;
+  @extend %display-flex-d-c-c;
+  gap: 10px;
+  background: linear-gradient(to right, #ffc01f1f, #ffffff, #ffc01f27);
+  .top {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    .box2 {
+      ul {
+        @extend %display-flex-d-s-l;
+        gap: 5px;
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: $textColor;
+            &:hover {
+              text-shadow: 1px 1px 1px grey;
+            }
+          }
+        }
+      }
+    }
+    .box3 {
+      @extend %display-flex-d-s-l;
+      gap: 12px;
+      p {
+        color: $textColor;
+      }
+    }
+    .box4 {
+      p {
+        color: $textColor;
+        margin-bottom: 20px;
+      }
+      .icons-sosial {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+      }
+    }
+  }
+  .bottom {
+    width: 90%;
+    @extend %display-flex-jc-sb;
+    padding: 20px 0;
+    p {
+      color: $textColor;
+    }
+  }
+}
+/*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*/
+
+
