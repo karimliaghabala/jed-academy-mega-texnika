@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
+.techniques .tech-info article a, .techniques .tech-info, nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer .bottom, .techniques .offers-items, .techniques .tech-nav ul, nav, header .header {
+footer .bottom, .techniques .offers-items, .techniques .tech-info article .top .top1, nav, header .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer, .techniques .offers-items article, body {
+footer, .techniques .offers-items article, .techniques .tech-info .imgs, body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,38 +108,67 @@ nav .right-nav a:first-child {
   text-decoration: none;
   color: #596C72;
 }
-.techniques .top-nav ul :nth-child(2) a {
+.techniques .top-nav ul :nth-child(3) a {
   color: black;
+}
+.techniques .tech-info {
+  width: 100%;
+  padding: 50px 0;
+}
+.techniques .tech-info .imgs {
+  width: 10%;
+}
+.techniques .tech-info .imgs img {
+  width: 72px;
+  height: 96px;
+}
+.techniques .tech-info .img {
+  width: 40%;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.185);
+}
+.techniques .tech-info article {
+  width: 40%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #596C72;
+}
+.techniques .tech-info article .top h2 {
+  font-size: 26px;
+}
+.techniques .tech-info article .price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.techniques .tech-info article .price p:nth-child(2) {
+  color: #FFC01F;
+}
+.techniques .tech-info article a {
+  width: 100%;
+  text-decoration: none;
+}
+.techniques .tech-info article a button {
+  width: 100%;
+  height: 40px;
+  color: #596C72;
+  border: 1px solid #FFC01F;
+  background-color: #FFC01F;
+  border-radius: 30px;
+  transition: 200ms;
+  font-size: 14px;
+}
+.techniques .tech-info article a button:hover {
+  background-color: white;
+  border: 1px solid #596C72;
+  cursor: pointer;
 }
 .techniques h2 {
   color: #596C72;
   font-size: 30px;
   text-align: center;
-}
-.techniques .tech-nav {
-  width: 100%;
-  padding: 50px 0;
-}
-.techniques .tech-nav ul {
-  border: 1px solid #596C72;
-  border-radius: 30px;
-}
-.techniques .tech-nav ul li {
-  list-style: none;
-  padding: 10px;
-  border-radius: 30px;
-}
-.techniques .tech-nav ul li:hover {
-  background-color: #FFC01F;
-  color: black;
-}
-.techniques .tech-nav ul li a {
-  text-decoration: none;
-  color: #596C72;
-}
-.techniques .tech-nav ul li:nth-child(1) {
-  background-color: #FFC01F;
-  color: black;
 }
 .techniques .offers-items {
   flex-wrap: wrap;

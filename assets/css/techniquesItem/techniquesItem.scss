@@ -85,9 +85,60 @@ nav {
           color: $textColor;
         }
       }
-      :nth-child(2){
+      :nth-child(3){
         a{
           color: black;
+        }
+      }
+    }
+  }
+  .tech-info{
+    width: 100%;
+    @extend %display-flex-center;
+    padding: 50px 0;
+    .imgs{
+      width: 10%;
+      @extend %display-flex-d-c-c;
+      img{
+        width: 72px;
+        height: 96px;
+      }
+    }
+    .img{
+      width: 40%;
+      border: 1px solid rgba(128, 128, 128, 0.342);
+      box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.185);
+    }
+    article{
+      width: 40%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      color: $textColor;
+      .top{
+        .top1{
+          @extend %display-flex-jc-sb;
+        }
+        h2{
+          font-size: 26px;
+        }
+      }
+      .price{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        p:nth-child(2){
+          color: $color;
+        }
+      }
+      a{
+        width: 100%;
+        @extend %display-flex-center;
+        text-decoration: none;
+        button{
+          @include buttonYellow($width:100%);
+          font-size: 14px;
         }
       }
     }
@@ -97,32 +148,7 @@ nav {
     font-size: 30px;
     text-align: center;
   }
-  .tech-nav{
-    width: 100%;
-    padding: 50px 0;
-    ul{
-      @extend %display-flex-jc-sb;
-      border: 1px solid $textColor;
-      border-radius: 30px;
-      li{
-        list-style: none;
-        padding: 10px;
-        border-radius: 30px;
-        &:hover{
-          background-color: $color;
-          color:black
-        }
-        a{
-          text-decoration: none;
-          color: $textColor;
-        }
-      }
-      li:nth-child(1){
-        background-color: $color;
-        color:black
-      }
-    }
-  }
+
   .offers-items {
     @extend %display-flex-jc-sb;
     flex-wrap: wrap;
