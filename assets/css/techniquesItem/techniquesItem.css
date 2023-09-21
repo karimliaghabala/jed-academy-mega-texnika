@@ -169,6 +169,7 @@ nav .right-nav a:first-child {
   color: #596C72;
   font-size: 30px;
   text-align: center;
+  padding: 20px 0;
 }
 .techniques .offers-items {
   flex-wrap: wrap;
