@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+nav .right-nav, nav .middle-nav ul, header .header .right-header, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .bottom, .blog article, .blog main, nav, header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer, .blog main .left-main, body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .top .box3, footer .top .box2 ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+/*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
+header {
+  width: 100%;
+  height: 40px;
+  background-color: #FFC01F;
+}
+header .header {
+  width: 90%;
+}
+header .header .left-header p {
+  font-size: 14px;
+}
+header .header .right-header {
+  gap: 25px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<header section ended>>>>>>>>>>>>>>>>>>> */
+/*<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>>>*/
+nav {
+  width: 90%;
+  padding: 30px 0;
+}
+nav .middle-nav ul {
+  gap: 40px;
+}
+nav .middle-nav ul li {
+  list-style: none;
+  transition: 200ms;
+}
+nav .middle-nav ul li:hover {
+  color: black;
+  text-shadow: 1px 1px 1px grey;
+}
+nav .middle-nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #596C72;
+}
+nav .right-nav {
+  gap: 10px;
+}
+nav .right-nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #596C72;
+}
+nav .right-nav a:first-child {
+  color: black;
+}
+
+/*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<rental section start>>>>>>>>>>>>>>>>>>>*/
+.blog {
+  width: 90%;
+  padding: 30px 0 50px 0;
+}
+.blog .top-nav {
+  width: 100%;
+}
+.blog .top-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.blog .top-nav ul li {
+  list-style: none;
+  padding-right: 10px;
+}
+.blog .top-nav ul li a {
+  text-decoration: none;
+  color: #596C72;
+}
+.blog .top-nav ul :nth-child(2) a {
+  color: black;
+}
+.blog main {
+  width: 100%;
+  padding: 50px 0;
+  gap: 10px;
+}
+.blog main .left-main {
+  width: 40%;
+  color: #596C72;
+  gap: 20px;
+}
+.blog main .right-main {
+  width: 60%;
+}
+.blog main .right-main img {
+  width: 700px;
+  height: 460px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.158);
+  padding: 10px;
+}
+.blog article {
+  width: 100%;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.blog article a {
+  text-decoration: none;
+  transition: 300ms;
+}
+.blog article a:hover {
+  transform: scale(1.05);
+}
+.blog article a .items {
+  max-width: 282px;
+  height: 315px;
+  gap: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.158);
+  padding: 10px;
+  color: #596C72;
+}
+.blog article a .items img {
+  max-width: 260px;
+  height: 250px;
+}
+.blog article a .items .text :nth-child(2) {
+  font-size: 12px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<rental section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<footer section start>>>>>>>>>>>>>>>>>>>*/
+footer {
+  width: 100%;
+  gap: 10px;
+  background: linear-gradient(to right, rgba(255, 192, 31, 0.1215686275), #ffffff, rgba(255, 192, 31, 0.1529411765));
+}
+footer .top {
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .top .box2 ul {
+  gap: 5px;
+}
+footer .top .box2 ul li {
+  list-style: none;
+}
+footer .top .box2 ul li a {
+  text-decoration: none;
+  color: #596C72;
+}
+footer .top .box2 ul li a:hover {
+  text-shadow: 1px 1px 1px grey;
+}
+footer .top .box3 {
+  gap: 12px;
+}
+footer .top .box3 p {
+  color: #596C72;
+}
+footer .top .box4 p {
+  color: #596C72;
+  margin-bottom: 20px;
+}
+footer .top .box4 .icons-sosial {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+footer .bottom {
+  width: 90%;
+  padding: 20px 0;
+}
+footer .bottom p {
+  color: #596C72;
+}
+
+/*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=blog.css.map */
