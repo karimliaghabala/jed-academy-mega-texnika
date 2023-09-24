@@ -9,6 +9,9 @@ body {
   width: 100%;
   @extend %display-flex-d-c-c;
 }
+:root {
+  font-size: calc(4px + 1vh);
+}
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -20,7 +23,7 @@ header {
     @extend %display-flex-jc-sb;
     .left-header {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
     .right-header {
@@ -35,11 +38,23 @@ header {
 nav {
   width: 90%;
   @extend %display-flex-jc-sb;
-  padding: 30px 0;
+  padding: 2rem 0;
   .middle-nav {
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
     ul {
       @extend %display-flex-center;
-      gap: 40px;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 0.3rem;
+      }
+
       li {
         list-style: none;
         transition: 200ms;
@@ -49,17 +64,47 @@ nav {
         }
         a {
           @include textStyle();
+          font-size: 1.3rem;
+          @media (max-width: 1199.98px){
+            font-size: 1rem;
+          }
         }
       }
     }
   }
   .right-nav {
+    max-width: 200px;
     @extend %display-flex-center;
     gap: 10px;
-    a {
-      @include textStyle();
-      &:first-child {
-        color: black;
+    position: relative;
+    .lang {
+      @media (max-width: 992px) {
+        display: flex;
+        display: none;
+        top: 2rem;
+        position: absolute;
+      }
+      a {
+        @include textStyle();
+        padding: 2px;
+        &:first-child {
+          color: black;
+        }
+      }
+    }
+    i:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    i:nth-child(3) {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
@@ -69,6 +114,7 @@ nav {
 /*<<<<<<<<<<<<<<<<<<<aboutUs section start>>>>>>>>>>>>>>>>>>>*/
 .aboutUs {
   width: 90%;
+  @extend %display-flex-d-c-c;
   .top-about {
     padding: 10px 0;
     ul {
@@ -97,7 +143,10 @@ nav {
     gap: 10px;
     h1{
       color:$textColor;
-      font-size: 50px;
+      font-size: 4rem;
+      @media (max-width:576px) {
+        font-size: 2rem;
+      }
     }
     a{
       text-decoration: none;
@@ -108,8 +157,8 @@ nav {
     }
     p{
       text-align: center;
-      width: 500px;
       color: $textColor;
+      width: 100%;
     }
   }
 
@@ -131,7 +180,16 @@ nav {
   @extend %display-flex-center;
   gap: 50px;
   padding: 50px 0;
+  @media (max-width:576px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .left-ct {
+    @media (max-width:1200px){
+      display: none;
+    }
     margin-top: 150px;
     img {
       width: 330px;
@@ -143,15 +201,28 @@ nav {
     @extend %display-flex-d-s-l;
     gap: 20px;
     img {
-      width: 730px;
-      height: 450px;
+      max-width: 730px;
+      height: auto;
+      @media (max-width:1200px){
+        width: 60rem;
+      }
+      @media (max-width:768px){
+        width: 45rem;
+      }
+      @media (max-width:576px){
+        width: 22rem;
+      }
     }
     article {
       @extend %display-flex-d-s-l;
       gap: 20px;
       h2 {
         color: $textColor;
-        font-size: 35px;
+        font-size: 3rem;
+        @media (max-width:576px){
+          font-size: 2rem;
+
+        }
       }
       a {
         text-decoration: none;
@@ -171,6 +242,12 @@ nav {
   @extend %display-flex-center;
   gap: 10px;
   margin: 50px 0;
+  @media (max-width:992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   article {
     @extend %display-flex-d-s-l;
     gap: 10px;
@@ -187,8 +264,14 @@ nav {
     padding: 10px;
     img {
       width: 641px;
-      height: 425px;
+      height: auto;
       box-shadow: 1px 1px 10px grey;
+      @media (max-width:767px) {
+        width: 50rem;
+      }
+      @media (max-width:575px) {
+        width: 30rem;
+      }
     }
   }
 }
@@ -205,6 +288,9 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    @media (max-width:992px) {
+      flex-wrap: wrap;
+    }
     .box2 {
       ul {
         @extend %display-flex-d-s-l;

@@ -11,7 +11,7 @@ footer .bottom, nav, header .header {
   align-items: center;
 }
 
-footer, .aboutUs article, body {
+footer, .aboutUs article, .aboutUs, body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +36,10 @@ body {
   width: 100%;
 }
 
+:root {
+  font-size: calc(4px + 1vh);
+}
+
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -46,7 +50,7 @@ header .header {
   width: 90%;
 }
 header .header .left-header p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 header .header .right-header {
   gap: 25px;
@@ -56,10 +60,27 @@ header .header .right-header {
 /*<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>>>*/
 nav {
   width: 90%;
-  padding: 30px 0;
+  padding: 2rem 0;
+}
+@media (max-width: 768px) {
+  nav .middle-nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
 }
 nav .middle-nav ul {
-  gap: 40px;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  nav .middle-nav ul {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  nav .middle-nav ul {
+    gap: 0.3rem;
+  }
 }
 nav .middle-nav ul li {
   list-style: none;
@@ -73,17 +94,55 @@ nav .middle-nav ul li a {
   text-decoration: none;
   font-size: 14px;
   color: #596C72;
+  font-size: 1.3rem;
+}
+@media (max-width: 1199.98px) {
+  nav .middle-nav ul li a {
+    font-size: 1rem;
+  }
 }
 nav .right-nav {
+  max-width: 200px;
   gap: 10px;
+  position: relative;
 }
-nav .right-nav a {
+@media (max-width: 992px) {
+  nav .right-nav .lang {
+    display: flex;
+    display: none;
+    top: 2rem;
+    position: absolute;
+  }
+}
+nav .right-nav .lang a {
   text-decoration: none;
   font-size: 14px;
   color: #596C72;
+  padding: 2px;
 }
-nav .right-nav a:first-child {
+nav .right-nav .lang a:first-child {
   color: black;
+}
+nav .right-nav i:nth-child(2) {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav .right-nav i:nth-child(2) {
+    display: block;
+  }
+}
+nav .right-nav i:nth-child(3) {
+  display: none;
+}
+@media (max-width: 992px) {
+  nav .right-nav i:nth-child(3) {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  nav .right-nav i:nth-child(3) {
+    display: none;
+  }
 }
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
@@ -117,7 +176,12 @@ nav .right-nav a:first-child {
 }
 .aboutUs article h1 {
   color: #596C72;
-  font-size: 50px;
+  font-size: 4rem;
+}
+@media (max-width: 576px) {
+  .aboutUs article h1 {
+    font-size: 2rem;
+  }
 }
 .aboutUs article a {
   text-decoration: none;
@@ -128,8 +192,8 @@ nav .right-nav a:first-child {
 }
 .aboutUs article p {
   text-align: center;
-  width: 500px;
   color: #596C72;
+  width: 100%;
 }
 .aboutUs .bottom-about {
   border: 1px solid rgba(0, 0, 0, 0.123);
@@ -148,8 +212,21 @@ nav .right-nav a:first-child {
   gap: 50px;
   padding: 50px 0;
 }
+@media (max-width: 576px) {
+  .category-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .category-test .left-ct {
   margin-top: 150px;
+}
+@media (max-width: 1200px) {
+  .category-test .left-ct {
+    display: none;
+  }
 }
 .category-test .left-ct img {
   width: 330px;
@@ -160,15 +237,35 @@ nav .right-nav a:first-child {
   gap: 20px;
 }
 .category-test .right-ct img {
-  width: 730px;
-  height: 450px;
+  max-width: 730px;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .category-test .right-ct img {
+    width: 60rem;
+  }
+}
+@media (max-width: 768px) {
+  .category-test .right-ct img {
+    width: 45rem;
+  }
+}
+@media (max-width: 576px) {
+  .category-test .right-ct img {
+    width: 22rem;
+  }
 }
 .category-test .right-ct article {
   gap: 20px;
 }
 .category-test .right-ct article h2 {
   color: #596C72;
-  font-size: 35px;
+  font-size: 3rem;
+}
+@media (max-width: 576px) {
+  .category-test .right-ct article h2 {
+    font-size: 2rem;
+  }
 }
 .category-test .right-ct article a {
   text-decoration: none;
@@ -195,6 +292,14 @@ nav .right-nav a:first-child {
   gap: 10px;
   margin: 50px 0;
 }
+@media (max-width: 992px) {
+  .whyWe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .whyWe article {
   gap: 10px;
 }
@@ -211,8 +316,18 @@ nav .right-nav a:first-child {
 }
 .whyWe figure img {
   width: 641px;
-  height: 425px;
+  height: auto;
   box-shadow: 1px 1px 10px grey;
+}
+@media (max-width: 767px) {
+  .whyWe figure img {
+    width: 50rem;
+  }
+}
+@media (max-width: 575px) {
+  .whyWe figure img {
+    width: 30rem;
+  }
 }
 
 /*<<<<<<<<<<<<<<<<<<<whyWe section end>>>>>>>>>>>>>>>>>>>*/
@@ -227,6 +342,11 @@ footer .top {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 992px) {
+  footer .top {
+    flex-wrap: wrap;
+  }
 }
 footer .top .box2 ul {
   gap: 5px;
