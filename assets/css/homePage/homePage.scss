@@ -9,6 +9,9 @@ body {
   width: 100%;
   @extend %display-flex-d-c-c;
 }
+:root {
+  font-size: calc(4px + 1vh);
+}
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -20,7 +23,7 @@ header {
     @extend %display-flex-jc-sb;
     .left-header {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
     .right-header {
@@ -35,11 +38,23 @@ header {
 nav {
   width: 90%;
   @extend %display-flex-jc-sb;
-  padding: 30px 0;
+  padding: 2rem 0;
   .middle-nav {
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
     ul {
       @extend %display-flex-center;
-      gap: 40px;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 0.3rem;
+      }
+
       li {
         list-style: none;
         transition: 200ms;
@@ -49,17 +64,47 @@ nav {
         }
         a {
           @include textStyle();
+          font-size: 1.3rem;
+          @media (max-width: 1199.98px){
+            font-size: 1rem;
+          }
         }
       }
     }
   }
   .right-nav {
+    max-width: 200px;
     @extend %display-flex-center;
     gap: 10px;
-    a {
-      @include textStyle();
-      &:first-child {
-        color: black;
+    position: relative;
+    .lang {
+      @media (max-width: 992px) {
+        display: flex;
+        display: none;
+        top: 2rem;
+        position: absolute;
+      }
+      a {
+        @include textStyle();
+        padding: 2px;
+        &:first-child {
+          color: black;
+        }
+      }
+    }
+    i:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    i:nth-child(3) {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
@@ -70,17 +115,32 @@ nav {
 
 main {
   width: 90%;
-  padding-top: 30px;
+  padding-top: 3rem;
   @extend %display-flex-center;
+  @media (max-width:1200px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .left-main {
     @extend %display-flex-d-s-l;
-    gap: 20px;
+    gap: 2.5rem;
+    @media (max-width:1200px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     h1 {
-      font-size: 50px;
+      font-size: 4rem;
       color: $textColor;
+      @media (max-width:992px){
+        font-size: 2rem;
+      }
     }
     p {
-      padding-right: 50px;
+      max-width: 40rem;
     }
     button {
       @include buttonWhite();
@@ -93,9 +153,18 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.123);
     padding: 10px;
     img {
-      width: 641px;
-      height: 425px;
+      max-width: 60rem;
+      height: avto;
       box-shadow: 1px 1px 10px grey;
+      @media (max-width: 1199.98px){
+        max-width: 50rem;
+      }
+      @media (max-width:992px){
+        max-width: 40rem;
+      }
+      @media (max-width:576px){
+        max-width: 30rem;
+      }
     }
   }
 }
@@ -386,23 +455,23 @@ main {
 /*<<<<<<<<<<<<<<<<<<<contact section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<whyWe section start>>>>>>>>>>>>>>>>>>>*/
 
-.whyWe{
+.whyWe {
   width: 90%;
   @extend %display-flex-center;
   gap: 10px;
   margin: 50px 0;
-  article{
+  article {
     @extend %display-flex-d-s-l;
     gap: 10px;
-    h2{
-    color:$textColor;
-    font-size: 30px;
+    h2 {
+      color: $textColor;
+      font-size: 30px;
     }
-    p{
+    p {
       font-size: 14px;
     }
   }
-  figure{
+  figure {
     border: 1px solid rgba(0, 0, 0, 0.123);
     padding: 10px;
     img {
@@ -415,25 +484,25 @@ main {
 
 /*<<<<<<<<<<<<<<<<<<<whyWe section end>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<footer section start>>>>>>>>>>>>>>>>>>>*/
-footer{
+footer {
   width: 100%;
   @extend %display-flex-d-c-c;
   gap: 10px;
-  background: linear-gradient(to right, #ffc01f1f,#FFFFFF, #ffc01f27  );
-  .top{
+  background: linear-gradient(to right, #ffc01f1f, #ffffff, #ffc01f27);
+  .top {
     width: 90%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    .box2{
-      ul{
+    .box2 {
+      ul {
         @extend %display-flex-d-s-l;
         gap: 5px;
-        li{
+        li {
           list-style: none;
-          a{
+          a {
             text-decoration: none;
-            color: $textColor ;
+            color: $textColor;
             &:hover {
               text-shadow: 1px 1px 1px grey;
             }
@@ -441,31 +510,30 @@ footer{
         }
       }
     }
-    .box3{
+    .box3 {
       @extend %display-flex-d-s-l;
       gap: 12px;
-      p{
+      p {
         color: $textColor;
       }
     }
-    .box4{
-      p{
+    .box4 {
+      p {
         color: $textColor;
         margin-bottom: 20px;
       }
-      .icons-sosial{
+      .icons-sosial {
         display: flex;
         justify-content: flex-start;
         gap: 20px;
       }
     }
-
   }
-  .bottom{
+  .bottom {
     width: 90%;
     @extend %display-flex-jc-sb;
     padding: 20px 0;
-    p{
+    p {
       color: $textColor;
     }
   }
