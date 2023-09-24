@@ -243,6 +243,14 @@ main .right-main img {
   padding: 20px 0;
   gap: 10px;
 }
+@media (max-width: 576px) {
+  .categories .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .categories .items a {
   text-decoration: none;
 }
@@ -271,8 +279,21 @@ main .right-main img {
   gap: 50px;
   padding: 50px 0;
 }
+@media (max-width: 576px) {
+  .category-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .category-test .left-ct {
   margin-top: 150px;
+}
+@media (max-width: 1200px) {
+  .category-test .left-ct {
+    display: none;
+  }
 }
 .category-test .left-ct img {
   width: 330px;
@@ -283,15 +304,35 @@ main .right-main img {
   gap: 20px;
 }
 .category-test .right-ct img {
-  width: 730px;
-  height: 450px;
+  max-width: 730px;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .category-test .right-ct img {
+    width: 60rem;
+  }
+}
+@media (max-width: 768px) {
+  .category-test .right-ct img {
+    width: 45rem;
+  }
+}
+@media (max-width: 576px) {
+  .category-test .right-ct img {
+    width: 22rem;
+  }
 }
 .category-test .right-ct article {
   gap: 20px;
 }
 .category-test .right-ct article h2 {
   color: #596C72;
-  font-size: 35px;
+  font-size: 3rem;
+}
+@media (max-width: 576px) {
+  .category-test .right-ct article h2 {
+    font-size: 2rem;
+  }
 }
 .category-test .right-ct article a {
   text-decoration: none;
@@ -316,7 +357,7 @@ main .right-main img {
 .offers {
   width: 90%;
   padding: 50px 0;
-  gap: 20px;
+  gap: 2rem;
 }
 .offers h2 {
   color: #596C72;
@@ -324,6 +365,14 @@ main .right-main img {
 .offers .offers-items {
   flex-wrap: wrap;
   gap: 15px;
+}
+@media (max-width: 576px) {
+  .offers .offers-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .offers .offers-items article {
   border: 1px solid rgba(128, 128, 128, 0.098);
@@ -432,6 +481,7 @@ main .right-main img {
 }
 .innovation .items-inn {
   gap: 95px;
+  flex-wrap: wrap;
 }
 .innovation .items-inn article {
   gap: 20px;
@@ -455,13 +505,19 @@ main .right-main img {
 /*<<<<<<<<<<<<<<<<<<<contact section start>>>>>>>>>>>>>>>>>>>*/
 .contact {
   width: 100%;
-  height: 300px;
+  height: auto;
   background-color: #efefef;
   margin: 80px 0;
 }
 .contact .contact-in {
   width: 90%;
   gap: 30px;
+}
+@media (max-width: 1200px) {
+  .contact .contact-in {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .contact .contact-in article {
   width: 40%;
@@ -481,6 +537,11 @@ main .right-main img {
   width: 100%;
   gap: 10px;
 }
+@media (max-width: 992px) {
+  .contact .contact-in article form .left-input {
+    display: block;
+  }
+}
 .contact .contact-in article form .left-input input {
   width: 100%;
   padding: 10px;
@@ -490,6 +551,11 @@ main .right-main img {
 .contact .contact-in article form .right-input {
   width: 100%;
   gap: 10px;
+}
+@media (max-width: 992px) {
+  .contact .contact-in article form .right-input {
+    display: block;
+  }
 }
 .contact .contact-in article form .right-input input {
   width: 100%;
@@ -521,6 +587,11 @@ main .right-main img {
   height: 520px;
   padding-bottom: 100px;
 }
+@media (max-width: 1200px) {
+  .contact .contact-in figure img {
+    display: none;
+  }
+}
 
 /*<<<<<<<<<<<<<<<<<<<contact section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<whyWe section start>>>>>>>>>>>>>>>>>>>*/
@@ -528,6 +599,14 @@ main .right-main img {
   width: 90%;
   gap: 10px;
   margin: 50px 0;
+}
+@media (max-width: 992px) {
+  .whyWe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .whyWe article {
   gap: 10px;
@@ -545,8 +624,18 @@ main .right-main img {
 }
 .whyWe figure img {
   width: 641px;
-  height: 425px;
+  height: auto;
   box-shadow: 1px 1px 10px grey;
+}
+@media (max-width: 767px) {
+  .whyWe figure img {
+    width: 50rem;
+  }
+}
+@media (max-width: 575px) {
+  .whyWe figure img {
+    width: 32rem;
+  }
 }
 
 /*<<<<<<<<<<<<<<<<<<<whyWe section end>>>>>>>>>>>>>>>>>>>*/
@@ -561,6 +650,11 @@ footer .top {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 992px) {
+  footer .top {
+    flex-wrap: wrap;
+  }
 }
 footer .top .box2 ul {
   gap: 5px;

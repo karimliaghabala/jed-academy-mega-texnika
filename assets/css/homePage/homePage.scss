@@ -187,6 +187,12 @@ main {
     flex-wrap: wrap;
     padding: 20px 0;
     gap: 10px;
+    @media (max-width:576px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     a {
       text-decoration: none;
       .items-c {
@@ -219,7 +225,16 @@ main {
   @extend %display-flex-center;
   gap: 50px;
   padding: 50px 0;
+  @media (max-width:576px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .left-ct {
+    @media (max-width:1200px){
+      display: none;
+    }
     margin-top: 150px;
     img {
       width: 330px;
@@ -231,15 +246,28 @@ main {
     @extend %display-flex-d-s-l;
     gap: 20px;
     img {
-      width: 730px;
-      height: 450px;
+      max-width: 730px;
+      height: auto;
+      @media (max-width:1200px){
+        width: 60rem;
+      }
+      @media (max-width:768px){
+        width: 45rem;
+      }
+      @media (max-width:576px){
+        width: 22rem;
+      }
     }
     article {
       @extend %display-flex-d-s-l;
       gap: 20px;
       h2 {
         color: $textColor;
-        font-size: 35px;
+        font-size: 3rem;
+        @media (max-width:576px){
+          font-size: 2rem;
+
+        }
       }
       a {
         text-decoration: none;
@@ -258,7 +286,8 @@ main {
   width: 90%;
   padding: 50px 0;
   @extend %display-flex-d-c-c;
-  gap: 20px;
+  gap: 2rem;
+
   h2 {
     color: $textColor;
   }
@@ -266,6 +295,12 @@ main {
     @extend %display-flex-jc-sb;
     flex-wrap: wrap;
     gap: 15px;
+    @media (max-width:576px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     article {
       border: 1px solid rgba(128, 128, 128, 0.098);
       box-shadow: 1px 1px 3px rgb(204, 202, 202);
@@ -364,6 +399,7 @@ main {
   .items-inn {
     @extend %display-flex-center;
     gap: 95px;
+    flex-wrap: wrap;
     article {
       @extend %display-flex-d-s-l;
       gap: 20px;
@@ -390,7 +426,7 @@ main {
 
 .contact {
   width: 100%;
-  height: 300px;
+  height: auto;
   background-color: #efefef;
   margin: 80px 0;
   @extend %display-flex-center;
@@ -398,6 +434,10 @@ main {
     width: 90%;
     @extend %display-flex-jc-sb;
     gap: 30px;
+    @media(max-width:1200px){
+      display: flex;
+      flex-direction: column;
+    }
     article {
       width: 40%;
       @extend %display-flex-d-s-l;
@@ -416,6 +456,9 @@ main {
           width: 100%;
           @extend %display-flex-center;
           gap: 10px;
+          @media (max-width:992px){
+            display: block;
+          }
           input {
             width: 100%;
             padding: 10px;
@@ -427,6 +470,9 @@ main {
           width: 100%;
           @extend %display-flex-center;
           gap: 10px;
+          @media (max-width:992px){
+            display: block;
+          }
           input {
             width: 100%;
             padding: 10px;
@@ -447,6 +493,9 @@ main {
         width: 650px;
         height: 520px;
         padding-bottom: 100px;
+        @media(max-width:1200px){
+          display: none;
+        }
       }
     }
   }
@@ -460,6 +509,12 @@ main {
   @extend %display-flex-center;
   gap: 10px;
   margin: 50px 0;
+  @media (max-width:992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   article {
     @extend %display-flex-d-s-l;
     gap: 10px;
@@ -476,8 +531,14 @@ main {
     padding: 10px;
     img {
       width: 641px;
-      height: 425px;
+      height: auto;
       box-shadow: 1px 1px 10px grey;
+      @media (max-width:767px) {
+        width: 50rem;
+      }
+      @media (max-width:575px) {
+        width: 32rem;
+      }
     }
   }
 }
@@ -494,6 +555,9 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    @media (max-width:992px) {
+      flex-wrap: wrap;
+    }
     .box2 {
       ul {
         @extend %display-flex-d-s-l;
