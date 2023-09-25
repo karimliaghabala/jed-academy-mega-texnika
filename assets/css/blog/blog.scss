@@ -114,17 +114,27 @@ nav {
 .response-menu{
   width: 90%;
   display: none;
+  background-color: $color;
+  padding: 10px;
   ul{
     padding: 20px 0;
+    text-align: center;
     li{
       list-style: none;
+      padding: 5px 0;
+      &:hover{
+        background-color: white;
+      }
       a{
         text-decoration: none;
-        color: $textColor;
+        color: black;
+        font-weight: 600;
+
       }
     }
   }
   .lang{
+    text-align: center;
     a{
       text-decoration: none;
       color: $textColor;

@@ -150,16 +150,27 @@ nav .right-nav i:nth-child(3) {
 .response-menu {
   width: 90%;
   display: none;
+  background-color: #FFC01F;
+  padding: 10px;
 }
 .response-menu ul {
   padding: 20px 0;
+  text-align: center;
 }
 .response-menu ul li {
   list-style: none;
+  padding: 5px 0;
+}
+.response-menu ul li:hover {
+  background-color: white;
 }
 .response-menu ul li a {
   text-decoration: none;
-  color: #596C72;
+  color: black;
+  font-weight: 600;
+}
+.response-menu .lang {
+  text-align: center;
 }
 .response-menu .lang a {
   text-decoration: none;
