@@ -5,10 +5,10 @@ let nav = false;
 
 techIcon.addEventListener('click',()=>{
         if(!nav){
-            techNav.style.display = "block";
+            techNav.style.transform = "translateX(0)";
             nav = true;
         }else{
-            techNav.style.display = "none";
+            techNav.style.transform ="translateX(100%)";
             nav = false;
         }
 
