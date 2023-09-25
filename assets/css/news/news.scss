@@ -110,6 +110,28 @@ nav {
 }
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
+.response-menu{
+  width: 90%;
+  display: none;
+  ul{
+    padding: 20px 0;
+    li{
+      list-style: none;
+      a{
+        text-decoration: none;
+        color: $textColor;
+      }
+    }
+  }
+  .lang{
+    a{
+      text-decoration: none;
+      color: $textColor;
+    }
+  }
+}
+/*<<<<<<<<<<<<<<<<<<<responsiv section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<rental section start>>>>>>>>>>>>>>>>>>>*/
 .news {
   width: 90%;

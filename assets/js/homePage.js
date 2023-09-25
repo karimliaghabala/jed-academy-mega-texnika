@@ -1,11 +1,12 @@
 
-
-let icon = document.querySelector(".icon-lang");
+/*<<<<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>*/ 
+let icon1 = document.querySelector(".icon-lang");
+let icon2 = document.querySelector(".icon-menu");
+let menu = document.querySelector(".response-menu");
 let languages = document.querySelector(".lang");
-let nav = document.querySelector(".middle-nav>ul")
 let lang = false;
 
-icon.addEventListener('click',() => {
+icon1.addEventListener('click',() => {
     if(!lang){
         languages.style.display = "block";
         lang = true;
@@ -15,3 +16,14 @@ icon.addEventListener('click',() => {
         lang = false;
     }
 })
+
+icon2.addEventListener('click',() => {
+    if(!lang){
+        menu.style.display = "block";
+        lang = true;
+    }else{
+        menu.style.display = "none";
+        lang = false;
+    }
+})
+/*<<<<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>*/ 
