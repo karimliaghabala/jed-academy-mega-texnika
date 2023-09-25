@@ -9,6 +9,9 @@ body {
   width: 100%;
   @extend %display-flex-d-c-c;
 }
+:root {
+  font-size: calc(4px + 1vh);
+}
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -20,7 +23,7 @@ header {
     @extend %display-flex-jc-sb;
     .left-header {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
     .right-header {
@@ -31,15 +34,26 @@ header {
 }
 /*<<<<<<<<<<<<<<<<<<<header section ended>>>>>>>>>>>>>>>>>>> */
 /*<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>>>*/
-
 nav {
   width: 90%;
   @extend %display-flex-jc-sb;
-  padding: 30px 0;
+  padding: 2rem 0;
   .middle-nav {
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
     ul {
       @extend %display-flex-center;
-      gap: 40px;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 0.3rem;
+      }
+
       li {
         list-style: none;
         transition: 200ms;
@@ -49,24 +63,53 @@ nav {
         }
         a {
           @include textStyle();
+          font-size: 1.3rem;
+          @media (max-width: 1199.98px){
+            font-size: 1rem;
+          }
         }
       }
     }
   }
   .right-nav {
+    max-width: 200px;
     @extend %display-flex-center;
     gap: 10px;
-    a {
-      @include textStyle();
-      &:first-child {
-        color: black;
+    position: relative;
+    .lang {
+      @media (max-width: 992px) {
+        display: flex;
+        display: none;
+        top: 2rem;
+        position: absolute;
+      }
+      a {
+        @include textStyle();
+        padding: 2px;
+        &:first-child {
+          color: black;
+        }
+      }
+    }
+    i:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    i:nth-child(3) {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
 }
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
-
 /*<<<<<<<<<<<<<<<<<<<rental section start>>>>>>>>>>>>>>>>>>>*/
 .news {
   width: 90%;
@@ -98,30 +141,61 @@ nav {
     @extend %display-flex-jc-sb;
     gap: 20px;
     color: $textColor;
+    @media (max-width:767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .left-m{
       width: 40%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 20px;
+      @media (max-width:767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
       :nth-child(2){
         font-size: 12px;
       }
     }
     .right-m{
       width: 60%;
+      @media (max-width:767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
       img{
         width: 730px;
-        height: 490px;
+        height: auto;
         border: 1px solid rgba(128, 128, 128, 0.199);
         box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.158);
         padding: 10px;
+        @media (max-width:1200px) {
+          width: 55rem;
+        }
+        @media (max-width:992px) {
+          width: 45rem;
+        }
+        @media (max-width:575px) {
+          width: 32rem;
+        }
+        @media (max-width:370px) {
+          width: 25rem;
+        }
       }
     }
   }
 }
 /*<<<<<<<<<<<<<<<<<<<rental section ended>>>>>>>>>>>>>>>>>>>*/
-
 /*<<<<<<<<<<<<<<<<<<<footer section start>>>>>>>>>>>>>>>>>>>*/
 footer {
   width: 100%;
@@ -133,6 +207,9 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    @media (max-width:992px) {
+      flex-wrap: wrap;
+    }
     .box2 {
       ul {
         @extend %display-flex-d-s-l;

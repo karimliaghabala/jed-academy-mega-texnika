@@ -9,6 +9,9 @@ body {
   width: 100%;
   @extend %display-flex-d-c-c;
 }
+:root {
+  font-size: calc(4px + 1vh);
+}
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -20,7 +23,7 @@ header {
     @extend %display-flex-jc-sb;
     .left-header {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
     .right-header {
@@ -35,11 +38,23 @@ header {
 nav {
   width: 90%;
   @extend %display-flex-jc-sb;
-  padding: 30px 0;
+  padding: 2rem 0;
   .middle-nav {
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
     ul {
       @extend %display-flex-center;
-      gap: 40px;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 0.3rem;
+      }
+
       li {
         list-style: none;
         transition: 200ms;
@@ -49,17 +64,47 @@ nav {
         }
         a {
           @include textStyle();
+          font-size: 1.3rem;
+          @media (max-width: 1199.98px){
+            font-size: 1rem;
+          }
         }
       }
     }
   }
   .right-nav {
+    max-width: 200px;
     @extend %display-flex-center;
     gap: 10px;
-    a {
-      @include textStyle();
-      &:first-child {
-        color: black;
+    position: relative;
+    .lang {
+      @media (max-width: 992px) {
+        display: flex;
+        display: none;
+        top: 2rem;
+        position: absolute;
+      }
+      a {
+        @include textStyle();
+        padding: 2px;
+        &:first-child {
+          color: black;
+        }
+      }
+    }
+    i:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    i:nth-child(3) {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
@@ -92,17 +137,23 @@ nav {
       }
     }
   }
+  h2{
+    color: $textColor;
+    width: 100%;
+    text-align: center;
+  }
   .rental-info{
     width: 100%;
     @extend %display-flex-jc-sb;
     padding: 80px 0;
     gap: 20px;
+    
     .left{
       width: 30%;
-      h2{
-        color: $textColor;
-        padding-bottom: 80px;
+      @media (max-width:1220px) {
+        display: none;
       }
+
       img{
         width: 384px;
         height: 594px;
@@ -115,12 +166,27 @@ nav {
       width: 65%;
       @extend %display-flex-d-c-c;
       gap: 50px;
+      @media (max-width:1220px) {
+        width: 100%;
+      }
       img{
         width: 801px;
-        height: 522px;
+        height: auto;
         border: 1px solid rgba(128, 128, 128, 0.178);
         box-shadow: 1px 1px  rgba(128, 128, 128, 0.192);
         padding: 10px;
+        @media (max-width:992px) {
+          width: 60rem;
+        }
+        @media (max-width:767px) {
+          width: 45rem;
+        }
+        @media (max-width:575px) {
+          width: 35rem;
+        }
+        @media (max-width:400px) {
+          width: 25rem;
+        }
       }
       .text{
         max-width: 700px;
@@ -160,6 +226,9 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    @media (max-width:992px) {
+      flex-wrap: wrap;
+    }
     .box2 {
       ul {
         @extend %display-flex-d-s-l;
@@ -205,5 +274,4 @@ footer {
   }
 }
 /*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*/
-
 

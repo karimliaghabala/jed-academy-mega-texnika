@@ -36,6 +36,10 @@ body {
   width: 100%;
 }
 
+:root {
+  font-size: calc(4px + 1vh);
+}
+
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -46,7 +50,7 @@ header .header {
   width: 90%;
 }
 header .header .left-header p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 header .header .right-header {
   gap: 25px;
@@ -56,10 +60,27 @@ header .header .right-header {
 /*<<<<<<<<<<<<<<<<<<<navbar section start>>>>>>>>>>>>>>>>>>>*/
 nav {
   width: 90%;
-  padding: 30px 0;
+  padding: 2rem 0;
+}
+@media (max-width: 768px) {
+  nav .middle-nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
 }
 nav .middle-nav ul {
-  gap: 40px;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  nav .middle-nav ul {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  nav .middle-nav ul {
+    gap: 0.3rem;
+  }
 }
 nav .middle-nav ul li {
   list-style: none;
@@ -73,17 +94,55 @@ nav .middle-nav ul li a {
   text-decoration: none;
   font-size: 14px;
   color: #596C72;
+  font-size: 1.3rem;
+}
+@media (max-width: 1199.98px) {
+  nav .middle-nav ul li a {
+    font-size: 1rem;
+  }
 }
 nav .right-nav {
+  max-width: 200px;
   gap: 10px;
+  position: relative;
 }
-nav .right-nav a {
+@media (max-width: 992px) {
+  nav .right-nav .lang {
+    display: flex;
+    display: none;
+    top: 2rem;
+    position: absolute;
+  }
+}
+nav .right-nav .lang a {
   text-decoration: none;
   font-size: 14px;
   color: #596C72;
+  padding: 2px;
 }
-nav .right-nav a:first-child {
+nav .right-nav .lang a:first-child {
   color: black;
+}
+nav .right-nav i:nth-child(2) {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav .right-nav i:nth-child(2) {
+    display: block;
+  }
+}
+nav .right-nav i:nth-child(3) {
+  display: none;
+}
+@media (max-width: 992px) {
+  nav .right-nav i:nth-child(3) {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  nav .right-nav i:nth-child(3) {
+    display: none;
+  }
 }
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
@@ -120,12 +179,27 @@ nav .right-nav a:first-child {
   width: 90%;
   gap: 70px;
 }
+@media (max-width: 767px) {
+  .contact .contact-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .contact .contact-in article {
   width: 60%;
   gap: 20px;
 }
+@media (max-width: 767px) {
+  .contact .contact-in article {
+    width: 100%;
+  }
+}
 .contact .contact-in article h2 {
+  width: 100%;
   color: #596C72;
+  text-align: center;
 }
 .contact .contact-in article p {
   font-size: 12px;
@@ -138,6 +212,12 @@ nav .right-nav a:first-child {
   width: 100%;
   gap: 10px;
 }
+@media (max-width: 767px) {
+  .contact .contact-in article form .left-input {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .contact .contact-in article form .left-input input {
   width: 100%;
   padding: 10px;
@@ -147,6 +227,12 @@ nav .right-nav a:first-child {
 .contact .contact-in article form .right-input {
   width: 100%;
   gap: 10px;
+}
+@media (max-width: 767px) {
+  .contact .contact-in article form .right-input {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .contact .contact-in article form .right-input input {
   width: 100%;
@@ -176,6 +262,14 @@ nav .right-nav a:first-child {
 }
 .contact .contact-in .cont-info {
   width: 40%;
+}
+@media (max-width: 767px) {
+  .contact .contact-in .cont-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .contact .contact-in .cont-info .cards-info {
   max-width: 427px;
@@ -208,6 +302,11 @@ footer .top {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 992px) {
+  footer .top {
+    flex-wrap: wrap;
+  }
 }
 footer .top .box2 ul {
   gap: 5px;

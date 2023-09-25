@@ -9,6 +9,9 @@ body {
   width: 100%;
   @extend %display-flex-d-c-c;
 }
+:root {
+  font-size: calc(4px + 1vh);
+}
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -20,7 +23,7 @@ header {
     @extend %display-flex-jc-sb;
     .left-header {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
     .right-header {
@@ -35,11 +38,23 @@ header {
 nav {
   width: 90%;
   @extend %display-flex-jc-sb;
-  padding: 30px 0;
+  padding: 2rem 0;
   .middle-nav {
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
     ul {
       @extend %display-flex-center;
-      gap: 40px;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 0.3rem;
+      }
+
       li {
         list-style: none;
         transition: 200ms;
@@ -49,17 +64,47 @@ nav {
         }
         a {
           @include textStyle();
+          font-size: 1.3rem;
+          @media (max-width: 1199.98px){
+            font-size: 1rem;
+          }
         }
       }
     }
   }
   .right-nav {
+    max-width: 200px;
     @extend %display-flex-center;
     gap: 10px;
-    a {
-      @include textStyle();
-      &:first-child {
-        color: black;
+    position: relative;
+    .lang {
+      @media (max-width: 992px) {
+        display: flex;
+        display: none;
+        top: 2rem;
+        position: absolute;
+      }
+      a {
+        @include textStyle();
+        padding: 2px;
+        &:first-child {
+          color: black;
+        }
+      }
+    }
+    i:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    i:nth-child(3) {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
@@ -96,18 +141,36 @@ nav {
     width: 100%;
     @extend %display-flex-center;
     padding: 50px 0;
+    @media (max-width:767px) {
+      display: flex;
+      flex-direction: column;
+    }
     .imgs{
       width: 10%;
       @extend %display-flex-d-c-c;
       img{
         width: 72px;
-        height: 96px;
+        height: auto;
       }
     }
     .img{
       width: 40%;
       border: 1px solid rgba(128, 128, 128, 0.342);
       box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.185);
+      img{
+        @media (max-width:1280px) {
+          width: 35rem;
+        }
+        @media (max-width:992px) {
+          width: 28rem;
+        }
+        @media (max-width:767px) {
+          width: 20rem;
+        }
+        @media (max-width:575px) {
+          width: 10rem;
+        }
+      }
     }
     article{
       width: 40%;
@@ -116,12 +179,23 @@ nav {
       flex-direction: column;
       gap: 50px;
       color: $textColor;
+      @media (max-width:767px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
       .top{
         .top1{
           @extend %display-flex-jc-sb;
+          @media (max-width:767px) {
+            display: block;
+          }
         }
         h2{
-          font-size: 26px;
+          font-size: 3rem;
+          @media (max-width:767px) {
+            font-size: 1.5rem;
+          }
         }
       }
       .price{
@@ -130,6 +204,9 @@ nav {
         justify-content: space-between;
         p:nth-child(2){
           color: $color;
+        }
+        @media (max-width:767px) {
+          display: block;
         }
       }
       a{
@@ -154,6 +231,11 @@ nav {
     @extend %display-flex-jc-sb;
     flex-wrap: wrap;
     gap: 15px;
+    @media (max-width:767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     article {
       border: 1px solid rgba(128, 128, 128, 0.098);
       box-shadow: 1px 1px 3px rgb(204, 202, 202);
@@ -209,6 +291,9 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    @media (max-width:992px) {
+      flex-wrap: wrap;
+    }
     .box2 {
       ul {
         @extend %display-flex-d-s-l;

@@ -225,7 +225,7 @@ main {
   @extend %display-flex-center;
   gap: 50px;
   padding: 50px 0;
-  @media (max-width:576px) {
+  @media (max-width:1200px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -245,6 +245,13 @@ main {
     padding-left: 60px;
     @extend %display-flex-d-s-l;
     gap: 20px;
+    @media (max-width:1200px){
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     img {
       max-width: 730px;
       height: auto;
@@ -261,12 +268,19 @@ main {
     article {
       @extend %display-flex-d-s-l;
       gap: 20px;
+      @media (max-width:1200px){
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
       h2 {
         color: $textColor;
         font-size: 3rem;
+        text-align: center;
         @media (max-width:576px){
           font-size: 2rem;
-
         }
       }
       a {

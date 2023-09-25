@@ -9,6 +9,9 @@ body {
   width: 100%;
   @extend %display-flex-d-c-c;
 }
+:root {
+  font-size: calc(4px + 1vh);
+}
 /*<<<<<<<<<<<<<<<<<<<header section start>>>>>>>>>>>>>>>>>>> */
 header {
   width: 100%;
@@ -20,7 +23,7 @@ header {
     @extend %display-flex-jc-sb;
     .left-header {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
     .right-header {
@@ -35,11 +38,23 @@ header {
 nav {
   width: 90%;
   @extend %display-flex-jc-sb;
-  padding: 30px 0;
+  padding: 2rem 0;
   .middle-nav {
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
     ul {
       @extend %display-flex-center;
-      gap: 40px;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 0.3rem;
+      }
+
       li {
         list-style: none;
         transition: 200ms;
@@ -49,17 +64,47 @@ nav {
         }
         a {
           @include textStyle();
+          font-size: 1.3rem;
+          @media (max-width: 1199.98px){
+            font-size: 1rem;
+          }
         }
       }
     }
   }
   .right-nav {
+    max-width: 200px;
     @extend %display-flex-center;
     gap: 10px;
-    a {
-      @include textStyle();
-      &:first-child {
-        color: black;
+    position: relative;
+    .lang {
+      @media (max-width: 992px) {
+        display: flex;
+        display: none;
+        top: 2rem;
+        position: absolute;
+      }
+      a {
+        @include textStyle();
+        padding: 2px;
+        &:first-child {
+          color: black;
+        }
+      }
+    }
+    i:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    i:nth-child(3) {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
@@ -101,12 +146,23 @@ nav {
     width: 90%;
     @extend %display-flex-jc-sb;
     gap: 70px;
+    @media (max-width:767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     article {
       width: 60%;
       @extend %display-flex-d-s-l;
       gap: 20px;
+      @media (max-width:767px) {
+        width: 100%;
+      }
       h2 {
+        width: 100%;
         color: $textColor;
+        text-align: center;
       }
       p {
         font-size: 12px;
@@ -119,6 +175,10 @@ nav {
           width: 100%;
           @extend %display-flex-center;
           gap: 10px;
+          @media (max-width:767px) {
+            display: flex;
+            flex-direction: column;
+          }
           input {
             width: 100%;
             padding: 10px;
@@ -130,6 +190,10 @@ nav {
           width: 100%;
           @extend %display-flex-center;
           gap: 10px;
+          @media (max-width:767px) {
+            display: flex;
+            flex-direction: column;
+          }
           input {
             width: 100%;
             padding: 10px;
@@ -150,6 +214,12 @@ nav {
     }
     .cont-info {
       width: 40%;
+      @media (max-width:767px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .cards-info{
         max-width: 427px;
         border:1px solid rgba(128, 128, 128, 0.205);
@@ -185,6 +255,9 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    @media (max-width:992px) {
+      flex-wrap: wrap;
+    }
     .box2 {
       ul {
         @extend %display-flex-d-s-l;
