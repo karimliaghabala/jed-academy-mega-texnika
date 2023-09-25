@@ -511,9 +511,14 @@ main .right-main img {
   width: 270px;
   height: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .innovation .items-inn article img {
     width: 20rem;
+  }
+}
+@media (max-width: 767px) {
+  .innovation .items-inn article img {
+    width: 17rem;
   }
 }
 .innovation .items-inn article :nth-child(3) {
