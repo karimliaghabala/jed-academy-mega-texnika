@@ -210,19 +210,11 @@ nav .right-nav i:nth-child(3) {
 .techniques .tech-nav {
   width: 100%;
   padding: 50px 0;
+  display: none;
 }
 .techniques .tech-nav ul {
   border: 1px solid #596C72;
   border-radius: 30px;
-}
-.techniques .tech-nav ul i {
-  display: none;
-}
-@media (max-width: 767px) {
-  .techniques .tech-nav ul i {
-    display: flex;
-    flex-direction: column;
-  }
 }
 @media (max-width: 767px) {
   .techniques .tech-nav ul {
@@ -242,12 +234,16 @@ nav .right-nav i:nth-child(3) {
 }
 @media (max-width: 767px) {
   .techniques .tech-nav ul li {
-    display: none;
+    background-color: #FFC01F;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
   }
 }
 .techniques .tech-nav ul li a {
   text-decoration: none;
   color: #596C72;
+  font-weight: 600;
 }
 .techniques .tech-nav ul li:nth-child(2) {
   background-color: #FFC01F;
