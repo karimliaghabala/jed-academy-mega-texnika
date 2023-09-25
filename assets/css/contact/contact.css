@@ -149,9 +149,12 @@ nav .right-nav i:nth-child(3) {
 /*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
 .response-menu {
   width: 90%;
-  display: none;
   background-color: #FFC01F;
   padding: 10px;
+  position: fixed;
+  top: 100px;
+  transform: translateX(120%);
+  transition: transform 1s;
 }
 .response-menu ul {
   padding: 20px 0;

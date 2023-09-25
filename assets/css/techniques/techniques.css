@@ -149,9 +149,12 @@ nav .right-nav i:nth-child(3) {
 /*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
 .response-menu {
   width: 90%;
-  display: none;
   background-color: #FFC01F;
   padding: 10px;
+  position: fixed;
+  top: 100px;
+  transform: translateX(120%);
+  transition: transform 1s;
 }
 .response-menu ul {
   padding: 20px 0;
@@ -207,13 +210,24 @@ nav .right-nav i:nth-child(3) {
   font-size: 2rem;
   text-align: center;
 }
+.techniques .icon-tech {
+  display: none;
+}
+@media (max-width: 767px) {
+  .techniques .icon-tech {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
 .techniques .tech-nav {
   width: 100%;
   padding: 50px 0;
-  position: fixed;
-  top: 200px;
-  transform: translateX(100%);
-  transition: transform 1s;
+}
+@media (max-width: 767px) {
+  .techniques .tech-nav {
+    display: none;
+  }
 }
 .techniques .tech-nav ul {
   border: 1px solid #596C72;
@@ -248,7 +262,7 @@ nav .right-nav i:nth-child(3) {
   color: #596C72;
   font-weight: 600;
 }
-.techniques .tech-nav ul li:nth-child(2) {
+.techniques .tech-nav ul li:nth-child(1) {
   background-color: #FFC01F;
   color: black;
 }

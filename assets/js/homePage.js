@@ -17,13 +17,14 @@ icon1.addEventListener('click',() => {
     }
 })
 
-icon2.addEventListener('click',() => {
+icon2.addEventListener('click',()=>{
     if(!lang){
-        menu.style.display = "block";
+        menu.style.transform = "translateX(0)";
         lang = true;
-    }else{
-        menu.style.display = "none";
+    }else {
+        menu.style.display = "translateX(120%)";
         lang = false;
     }
+
 })
 /*<<<<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>*/ 

@@ -113,9 +113,12 @@ nav {
 /*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
 .response-menu{
   width: 90%;
-  display: none;
   background-color: $color;
   padding: 10px;
+  position: fixed;
+  top: 100px;
+  transform: translateX(120%);
+  transition: transform 1s ;
   ul{
     padding: 20px 0;
     text-align: center;
