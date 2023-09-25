@@ -509,7 +509,12 @@ main .right-main img {
 }
 .innovation .items-inn article img {
   width: 270px;
-  height: 200px;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .innovation .items-inn article img {
+    width: 20rem;
+  }
 }
 .innovation .items-inn article :nth-child(3) {
   color: #596C72;
