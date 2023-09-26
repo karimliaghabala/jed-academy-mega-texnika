@@ -117,7 +117,7 @@ nav {
   background-color: $color;
   padding: 10px;
   position: fixed;
-  top: 100px;
+  top: 0;
   transform: translateX(120%);
   transition: transform 1s ; 
   ul{
@@ -133,10 +133,10 @@ nav {
         text-decoration: none;
         color: black;
         font-weight: 600;
-
       }
     }
   }
+
   .lang{
     text-align: center;
     a{
@@ -144,6 +144,7 @@ nav {
       color: $textColor;
     }
   }
+
 }
 /*<<<<<<<<<<<<<<<<<<<responsiv section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<main section start>>>>>>>>>>>>>>>>>>>*/
@@ -171,11 +172,13 @@ main {
       font-size: 4rem;
       color: $textColor;
       @media (max-width:992px){
-        font-size: 2rem;
+        font-size: 3rem;
+        text-align: center;
       }
     }
     p {
-      max-width: 40rem;
+      max-width: 55rem;
+      text-align: center
     }
     button {
       @include buttonWhite();
@@ -191,14 +194,24 @@ main {
       max-width: 60rem;
       height: avto;
       box-shadow: 1px 1px 10px grey;
+      flex-shrink: 1;
       @media (max-width: 1199.98px){
-        max-width: 50rem;
+        max-width: 65rem;
       }
       @media (max-width:992px){
-        max-width: 40rem;
+        max-width: 52rem;
       }
       @media (max-width:576px){
-        max-width: 30rem;
+        max-width: 48rem;
+      }
+      @media (max-width:510px){
+        max-width: 38rem;
+      }
+      @media (max-width:415px){
+        max-width: 32rem;
+      }
+      @media (max-width:350px){
+        max-width: 27rem;
       }
     }
   }
@@ -222,6 +235,10 @@ main {
     flex-wrap: wrap;
     padding: 20px 0;
     gap: 10px;
+    @media (max-width:992px){
+      display: flex;
+      justify-content: center;
+    }
     @media (max-width:576px) {
       display: flex;
       flex-direction: column;
@@ -290,14 +307,22 @@ main {
     img {
       max-width: 730px;
       height: auto;
+      display:flex;
+      justify-content: center;
       @media (max-width:1200px){
         width: 60rem;
       }
       @media (max-width:768px){
-        width: 45rem;
+        width: 55rem;
       }
       @media (max-width:576px){
-        width: 22rem;
+        width: 45rem;
+      }
+      @media (max-width:445px){
+        width: 38rem;
+      }
+      @media (max-width:380px){
+        width: 30rem;
       }
     }
     article {
@@ -317,6 +342,9 @@ main {
         @media (max-width:576px){
           font-size: 2rem;
         }
+      }
+      p{
+        text-align: center;
       }
       a {
         text-decoration: none;
@@ -344,6 +372,10 @@ main {
     @extend %display-flex-jc-sb;
     flex-wrap: wrap;
     gap: 15px;
+    @media (max-width:992px){
+      display: flex;
+      justify-content: center;
+    }
     @media (max-width:576px) {
       display: flex;
       flex-direction: column;
@@ -453,15 +485,15 @@ main {
       @extend %display-flex-d-s-l;
       gap: 20px;
       width: 215px;
-      height: 328px;
+      height: auto;
       img {
-        width: 270px;
+        max-width: 270px;
         height: auto;
         @media (max-width:992px) {
           width: 20rem;
         }
         @media (max-width:767px) {
-          width: 17rem;
+          width: 20rem;
         }
       }
       :nth-child(3) {
@@ -583,11 +615,14 @@ main {
     @extend %display-flex-d-s-l;
     gap: 10px;
     h2 {
+      width: 100%;
       color: $textColor;
       font-size: 30px;
+      text-align: center;
     }
     p {
       font-size: 14px;
+      text-align: center;
     }
   }
   figure {
@@ -598,10 +633,16 @@ main {
       height: auto;
       box-shadow: 1px 1px 10px grey;
       @media (max-width:767px) {
-        width: 50rem;
+        width: 57rem;
       }
-      @media (max-width:575px) {
-        width: 30rem;
+      @media (max-width:585px) {
+        width: 45rem;
+      }
+      @media (max-width:485px) {
+        width: 35rem;
+      }
+      @media (max-width:385px) {
+        width: 29rem;
       }
     }
   }
