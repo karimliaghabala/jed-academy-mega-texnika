@@ -250,32 +250,32 @@ main .right-main img {
 }
 @media (max-width: 1199.98px) {
   main .right-main img {
-    max-width: 65rem;
+    max-width: 63rem;
   }
 }
 @media (max-width: 992px) {
   main .right-main img {
-    max-width: 52rem;
+    max-width: 50rem;
   }
 }
 @media (max-width: 576px) {
   main .right-main img {
-    max-width: 48rem;
+    max-width: 45rem;
   }
 }
 @media (max-width: 510px) {
   main .right-main img {
-    max-width: 38rem;
+    max-width: 35rem;
   }
 }
 @media (max-width: 415px) {
   main .right-main img {
-    max-width: 32rem;
+    max-width: 30rem;
   }
 }
 @media (max-width: 350px) {
   main .right-main img {
-    max-width: 27rem;
+    max-width: 25rem;
   }
 }
 
