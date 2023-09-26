@@ -1,63 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$fontFamilyMontserrat: "Montserrat", sans-serif;
+$color: #ffc01f;
+$textColor: #596c72;
 
-$fontFamilyMontserrat: 'Montserrat', sans-serif;
-$color:#FFC01F;
-$textColor:#596C72;
-
-%display-flex-center{
-    display: flex;
-    justify-content:center ;
-    align-items: center;
+%display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-%display-flex-jc-sb{
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
+%display-flex-jc-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-%display-flex-d-c-c{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+%display-flex-d-c-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-%display-flex-d-s-l{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: left;
+%display-flex-d-s-l {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
 }
-@mixin textStyle($font-s:14px){
-    text-decoration: none;
-    font-size: $font-s;
-    color: $textColor;
+@mixin textStyle($font-s: 14px) {
+  text-decoration: none;
+  font-size: $font-s;
+  color: $textColor;
 }
 
-@mixin buttonWhite ($width:200px,$height:40px){
-    width: $width;
-    height: $height;
-    color: $textColor;
-    border: 1px solid $textColor;
-    background-color: white;
-    border-radius:30px;
-    transition: 200ms;
-    &:hover{
-        background-color: $color;
-        border: 1px solid $color ;
-        cursor: pointer;
-    }
-}
-@mixin buttonYellow ($width:200px,$height:40px){
-    width: $width;
-    height: $height;
-    color: $textColor;
+@mixin buttonWhite($width: 200px, $height: 40px) {
+  width: $width;
+  height: $height;
+  color: $textColor;
+  border: 1px solid $textColor;
+  background-color: white;
+  border-radius: 30px;
+  transition: 200ms;
+  &:hover {
+    background-color: $color;
     border: 1px solid $color;
-    background-color:$color;
-    border-radius:30px;
-    transition: 200ms;
-    &:hover{
-        background-color: white;
-        border: 1px solid $textColor ;
-        cursor: pointer;
-    }
+    cursor: pointer;
+  }
 }
+@mixin buttonYellow($width: 200px, $height: 40px) {
+  width: $width;
+  height: $height;
+  color: $textColor;
+  border: 1px solid $color;
+  background-color: $color;
+  border-radius: 30px;
+  transition: 200ms;
+  &:hover {
+    background-color: white;
+    border: 1px solid $textColor;
+    cursor: pointer;
+  }
+}
+
