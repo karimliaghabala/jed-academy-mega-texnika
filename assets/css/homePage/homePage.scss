@@ -315,16 +315,16 @@ body {
           width: 60rem;
         }
         @media (max-width: 768px) {
-          width: 55rem;
+          width: 48rem;
         }
         @media (max-width: 576px) {
-          width: 45rem;
-        }
-        @media (max-width: 445px) {
           width: 38rem;
         }
+        @media (max-width: 445px) {
+          width: 28rem;
+        }
         @media (max-width: 380px) {
-          width: 30rem;
+          width: 20rem;
         }
       }
       article {
@@ -350,6 +350,8 @@ body {
         }
         a {
           text-decoration: none;
+          width: 100%;
+          text-align: center;
           button {
             @include buttonWhite();
           }
