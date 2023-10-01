@@ -44,7 +44,7 @@ body {
 header {
   width: 100%;
   height: 40px;
-  background-color: #FFC01F;
+  background-color: #ffc01f;
 }
 header .header {
   width: 90%;
@@ -93,7 +93,7 @@ nav .middle-nav ul li:hover {
 nav .middle-nav ul li a {
   text-decoration: none;
   font-size: 14px;
-  color: #596C72;
+  color: #596c72;
   font-size: 1.3rem;
 }
 @media (max-width: 1199.98px) {
@@ -117,7 +117,7 @@ nav .right-nav {
 nav .right-nav .lang a {
   text-decoration: none;
   font-size: 14px;
-  color: #596C72;
+  color: #596c72;
   padding: 2px;
 }
 nav .right-nav .lang a:first-child {
@@ -148,13 +148,26 @@ nav .right-nav i:nth-child(3) {
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
 .response-menu {
-  width: 90%;
-  background-color: #FFC01F;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffc01f;
   padding: 10px;
   position: fixed;
-  top: 100px;
+  top: 0;
   transform: translateX(120%);
   transition: transform 1s;
+}
+.response-menu .logo-exit {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.response-menu .logo-exit img {
+  width: 80px;
+  height: auto;
+}
+.response-menu .logo-exit i {
+  padding: 10px;
 }
 .response-menu ul {
   padding: 20px 0;
@@ -177,7 +190,7 @@ nav .right-nav i:nth-child(3) {
 }
 .response-menu .lang a {
   text-decoration: none;
-  color: #596C72;
+  color: #596c72;
 }
 
 /*<<<<<<<<<<<<<<<<<<<responsiv section ended>>>>>>>>>>>>>>>>>>>*/
@@ -198,7 +211,7 @@ nav .right-nav i:nth-child(3) {
 }
 .aboutUs .top-about ul a {
   text-decoration: none;
-  color: #596C72;
+  color: #596c72;
 }
 .aboutUs .top-about ul a:hover {
   text-shadow: 1px 1px 1px grey;
@@ -210,7 +223,7 @@ nav .right-nav i:nth-child(3) {
   gap: 10px;
 }
 .aboutUs article h1 {
-  color: #596C72;
+  color: #596c72;
   font-size: 4rem;
 }
 @media (max-width: 576px) {
@@ -220,14 +233,14 @@ nav .right-nav i:nth-child(3) {
 }
 .aboutUs article a {
   text-decoration: none;
-  color: #FFC01F;
+  color: #ffc01f;
 }
 .aboutUs article a:hover {
   text-shadow: 1px 1px 1px grey;
 }
 .aboutUs article p {
   text-align: center;
-  color: #596C72;
+  color: #596c72;
   width: 100%;
 }
 .aboutUs .bottom-about {
@@ -312,7 +325,7 @@ nav .right-nav i:nth-child(3) {
   }
 }
 .category-test .right-ct article h2 {
-  color: #596C72;
+  color: #596c72;
   font-size: 3rem;
   text-align: center;
 }
@@ -327,15 +340,15 @@ nav .right-nav i:nth-child(3) {
 .category-test .right-ct article a button {
   width: 200px;
   height: 40px;
-  color: #596C72;
-  border: 1px solid #596C72;
+  color: #596c72;
+  border: 1px solid #596c72;
   background-color: white;
   border-radius: 30px;
   transition: 200ms;
 }
 .category-test .right-ct article a button:hover {
-  background-color: #FFC01F;
-  border: 1px solid #FFC01F;
+  background-color: #ffc01f;
+  border: 1px solid #ffc01f;
   cursor: pointer;
 }
 
@@ -358,7 +371,7 @@ nav .right-nav i:nth-child(3) {
   gap: 10px;
 }
 .whyWe article h2 {
-  color: #596C72;
+  color: #596c72;
   font-size: 30px;
 }
 .whyWe article p {
@@ -410,7 +423,7 @@ footer .top .box2 ul li {
 }
 footer .top .box2 ul li a {
   text-decoration: none;
-  color: #596C72;
+  color: #596c72;
 }
 footer .top .box2 ul li a:hover {
   text-shadow: 1px 1px 1px grey;
@@ -419,10 +432,10 @@ footer .top .box3 {
   gap: 12px;
 }
 footer .top .box3 p {
-  color: #596C72;
+  color: #596c72;
 }
 footer .top .box4 p {
-  color: #596C72;
+  color: #596c72;
   margin-bottom: 20px;
 }
 footer .top .box4 .icons-sosial {
@@ -435,7 +448,7 @@ footer .bottom {
   padding: 20px 0;
 }
 footer .bottom p {
-  color: #596C72;
+  color: #596c72;
 }
 
 /*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=aboutUs.css.map */

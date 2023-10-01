@@ -44,7 +44,7 @@ body {
 header {
   width: 100%;
   height: 40px;
-  background-color: #FFC01F;
+  background-color: #ffc01f;
 }
 header .header {
   width: 90%;
@@ -93,7 +93,7 @@ nav .middle-nav ul li:hover {
 nav .middle-nav ul li a {
   text-decoration: none;
   font-size: 14px;
-  color: #596C72;
+  color: #596c72;
   font-size: 1.3rem;
 }
 @media (max-width: 1199.98px) {
@@ -117,7 +117,7 @@ nav .right-nav {
 nav .right-nav .lang a {
   text-decoration: none;
   font-size: 14px;
-  color: #596C72;
+  color: #596c72;
   padding: 2px;
 }
 nav .right-nav .lang a:first-child {
@@ -148,13 +148,26 @@ nav .right-nav i:nth-child(3) {
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
 .response-menu {
-  width: 90%;
-  background-color: #FFC01F;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffc01f;
   padding: 10px;
   position: fixed;
-  top: 100px;
+  top: 0;
   transform: translateX(120%);
   transition: transform 1s;
+}
+.response-menu .logo-exit {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.response-menu .logo-exit img {
+  width: 80px;
+  height: auto;
+}
+.response-menu .logo-exit i {
+  padding: 10px;
 }
 .response-menu ul {
   padding: 20px 0;
@@ -177,7 +190,7 @@ nav .right-nav i:nth-child(3) {
 }
 .response-menu .lang a {
   text-decoration: none;
-  color: #596C72;
+  color: #596c72;
 }
 
 /*<<<<<<<<<<<<<<<<<<<responsiv section ended>>>>>>>>>>>>>>>>>>>*/
@@ -200,7 +213,7 @@ nav .right-nav i:nth-child(3) {
 }
 .blog .top-nav ul li a {
   text-decoration: none;
-  color: #596C72;
+  color: #596c72;
 }
 .blog .top-nav ul :nth-child(2) a {
   color: black;
@@ -220,7 +233,7 @@ nav .right-nav i:nth-child(3) {
 }
 .blog main .left-main {
   width: 40%;
-  color: #596C72;
+  color: #596c72;
   gap: 20px;
 }
 @media (max-width: 1200px) {
@@ -292,7 +305,7 @@ nav .right-nav i:nth-child(3) {
   border: 1px solid rgba(128, 128, 128, 0.199);
   box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.158);
   padding: 10px;
-  color: #596C72;
+  color: #596c72;
 }
 .blog article a .items img {
   max-width: 260px;
@@ -328,7 +341,7 @@ footer .top .box2 ul li {
 }
 footer .top .box2 ul li a {
   text-decoration: none;
-  color: #596C72;
+  color: #596c72;
 }
 footer .top .box2 ul li a:hover {
   text-shadow: 1px 1px 1px grey;
@@ -337,10 +350,10 @@ footer .top .box3 {
   gap: 12px;
 }
 footer .top .box3 p {
-  color: #596C72;
+  color: #596c72;
 }
 footer .top .box4 p {
-  color: #596C72;
+  color: #596c72;
   margin-bottom: 20px;
 }
 footer .top .box4 .icons-sosial {
@@ -353,7 +366,7 @@ footer .bottom {
   padding: 20px 0;
 }
 footer .bottom p {
-  color: #596C72;
+  color: #596c72;
 }
 
 /*<<<<<<<<<<<<<<<<<<<footer section end>>>>>>>>>>>>>>>>>>>*//*# sourceMappingURL=blog.css.map */

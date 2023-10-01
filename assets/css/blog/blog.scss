@@ -111,34 +111,47 @@ nav {
 
 /*<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>>>*/
 /*<<<<<<<<<<<<<<<<<<<responsiv section start>>>>>>>>>>>>>>>>>>>*/
-.response-menu{
-  width: 90%;
+.response-menu {
+  width: 100%;
+  height: 100vh;
   background-color: $color;
   padding: 10px;
   position: fixed;
-  top: 100px;
+  top: 0;
   transform: translateX(120%);
-  transition: transform 1s ;
-  ul{
+  transition: transform 1s;
+  .logo-exit {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    img{
+      width: 80px;
+      height: auto;
+    }
+    i {
+      padding: 10px;
+    }
+  }
+  ul {
     padding: 20px 0;
     text-align: center;
-    li{
+    li {
       list-style: none;
       padding: 5px 0;
-      &:hover{
+      &:hover {
         background-color: white;
       }
-      a{
+      a {
         text-decoration: none;
         color: black;
         font-weight: 600;
-
       }
     }
   }
-  .lang{
+
+  .lang {
     text-align: center;
-    a{
+    a {
       text-decoration: none;
       color: $textColor;
     }
