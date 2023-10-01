@@ -15,26 +15,25 @@ icon1.addEventListener("click", () => {
   } else {
     languages.style.display = "none";
   }
-  lang = !lang
+  lang = !lang;
 });
 //response menu active
 icon2.addEventListener("click", () => {
   if (!resMenu) {
     menu.style.transform = "translateX(0)";
+    icon3.addEventListener("click", () => {
+      if (!closemenu) {
+        menu.style.transform = "translateX(120%)";
+      } else {
+        menu.style.transform = "translateX(0)";
+      }
+      closemenu = !closemenu;
+    });
+  } else {
+    menu.style.transform = "translateX(120%)";
   }
-  else{
-    menu.style.transform = "translateX(120%)"
-  }
-  resMenu = !resMenu
+  resMenu = !resMenu;
 });
 //response menu deactive
-icon3.addEventListener("click", () => {
-  if (!closemenu) {
-    menu.style.transform = "translateX(120%)"
-  }  else{
-    menu.style.transform = "translateX(0)"
-  }
-  closemenu = !closemenu
-});
 
 /*<<<<<<<<<<<<<<<<<<<<<<navbar section ended>>>>>>>>>>>>>>>>>*/
